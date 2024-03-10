@@ -9,7 +9,7 @@ public class Item {
 	//Variables to be used in constructing of Item objects
 	private int age = 0;
 	private int maturationAge = 0;
-	private int deathAge = 0;
+	private int expectedLifespan = 0;
 	private double monetaryValue = 0.0;
 	
 	/**
@@ -22,7 +22,7 @@ public class Item {
 	public Item(int maturationAge, int deathAge, double monetaryValue) {
 
 		this.maturationAge = maturationAge;
-		this.deathAge = deathAge;
+		this.expectedLifespan = deathAge;
 		this.monetaryValue = monetaryValue;
 	}
 	
@@ -72,7 +72,7 @@ public class Item {
 		Item other = (Item) otherItem;
 		return age == other.age &&
 				maturationAge == other.maturationAge &&
-				deathAge == other.deathAge &&
+				expectedLifespan == other.expectedLifespan &&
 				Double.compare(monetaryValue, other.monetaryValue) == 0;
 	}
 	
@@ -84,7 +84,7 @@ public class Item {
 		return "Name: " + getClass().getSimpleName() //Returning the name of the class
 				+ "\nAge: " + age
 				+ "\nAge of Maturity: " + maturationAge
-				+ "\nExpected Lifespan (Years): " + deathAge
+				+ "\nExpected Lifespan (Years): " + expectedLifespan
 				+ "\nMonetary Value: $" + monetaryValue;
 	}
 	
