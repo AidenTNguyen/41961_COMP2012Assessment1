@@ -43,13 +43,13 @@ public class Item {
 	
 	/**
 	 * method to determine whether item is dead or alive depending on age
-	 * @return returns "Dead" or "Alive" depending on if age > expectedLifespan
+	 * @return returns true or false depending on if age > expectedLifespan
 	 */
-	public String died() {
+	public boolean died() {
 		if (age > expectedLifespan) {
-			return "Dead";
+			return true;
 		}
-		return "Alive";
+		return false;
 		
 	/**
 	 * Retrieves item's monetary value IF its age has passed age of maturity, meaning it's fully grown and harvestable. Otherwise returns 0.0
