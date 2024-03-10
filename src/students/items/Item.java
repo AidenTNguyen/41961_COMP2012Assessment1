@@ -16,13 +16,13 @@ public class Item {
 	 * Constructs a new Item object with age of maturity, death and monetary value
 	 * @param age represents the current age of the item (starts at 0)
 	 * @param maturationAge age of which the item reaches maturity
-	 * @param deathAge the expected lifespan of the item
+	 * @param expectedLifespan the expected lifespan of the item
 	 * @param monetaryValue the value of the item
 	 */
-	public Item(int maturationAge, int deathAge, double monetaryValue) {
+	public Item(int maturationAge, int expectedLifespan, double monetaryValue) {
 
 		this.maturationAge = maturationAge;
-		this.expectedLifespan = deathAge;
+		this.expectedLifespan = expectedLifespan;
 		this.monetaryValue = monetaryValue;
 	}
 	
