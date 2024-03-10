@@ -7,10 +7,10 @@ package students.items;
 public class Item {
 	
 	//Variables to be used in constructing of Item objects
-	private int age = 0;
-	private int maturationAge = 0;
-	private int expectedLifespan = 0;
-	private double monetaryValue = 0.0;
+	protected int age = 0;
+	protected int maturationAge = 0;
+	protected int expectedLifespan = 0;
+	protected double monetaryValue = 0.0;
 	
 	/**
 	 * Constructs a new Item object with age of maturity, death and monetary value
