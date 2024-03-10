@@ -45,6 +45,17 @@ public class Item {
 	 * Retrieves item's monetary value IF its age has passed age of maturity, meaning it's fully grown and harvestable. Otherwise returns 0.0
 	 * @return Item's monetary value
 	 */
+	
+	/**
+	 * method to determine whether item is dead or alive depending on age
+	 * @return returns "Dead" or "Alive" depending on if age > expectedLifespan
+	 */
+	protected String died() {
+		if (age > expectedLifespan) {
+			return "Dead";
+		}
+		return "Alive";
+	}
 	protected double getValue() {
 		if (this.age > this.maturationAge) {
 			return this.monetaryValue;
