@@ -76,4 +76,16 @@ public class Item {
 				Double.compare(monetaryValue, other.monetaryValue) == 0;
 	}
 	
+	/**
+	 * Overriden toString method to return subclasses and their string representations
+	 */
+	@Override
+	public String toString() {
+		return "Name: " + getClass().getSimpleName() //Returning the name of the class
+				+ "\nAge: " + age
+				+ "\nAge of Maturity: " + maturationAge
+				+ "\nExpected Lifespan (Years): " + deathAge
+				+ "\nMonetary Value: $" + monetaryValue;
+	}
+	
 }
