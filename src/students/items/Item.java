@@ -50,7 +50,7 @@ public class Item {
 	 * method to determine whether item is dead or alive depending on age
 	 * @return returns "Dead" or "Alive" depending on if age > expectedLifespan
 	 */
-	protected String died() {
+	public String died() {
 		if (age > expectedLifespan) {
 			return "Dead";
 		}
