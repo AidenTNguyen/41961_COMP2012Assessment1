@@ -52,4 +52,28 @@ public class Item {
 		return 0.0; //Item is not yet fully mature
 	}
 	
+	/**
+	 * Overriden equals method to compare items of the 'Item' class and associated subclasses
+	 */
+	@Override
+	public boolean equals(Object otherItem) {
+		
+		//If the object is compared with itself than return true
+		if (this == otherItem) {
+			return true;
+		}
+		
+		//If the otherItem references Null than this returns false
+		if (otherItem == null) {
+			return false;
+		}
+		
+		//Checks if the two items have the same age, age of maturity and expected lifespan
+		Item other = (Item) otherItem;
+		return age == other.age &&
+				maturationAge == other.maturationAge &&
+				deathAge == other.deathAge &&
+				Double.compare(monetaryValue, other.monetaryValue) == 0;
+	}
+	
 }
