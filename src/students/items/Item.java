@@ -7,7 +7,7 @@ package students.items;
 public class Item {
 	
 	//Variables to be used in constructing of Item objects
-	private int age = 0;
+	private int age;
 	private int maturationAge = 0;
 	private int deathAge = 0;
 	private double monetaryValue = 0.0;
@@ -19,9 +19,8 @@ public class Item {
 	 * @param deathAge the expected lifespan of the item
 	 * @param monetaryValue the value of the item
 	 */
-	public Item(int age, int maturationAge, int deathAge, double monetaryValue) {
-		
-		this.age = age;
+	public Item(int maturationAge, int deathAge, double monetaryValue) {
+
 		this.maturationAge = maturationAge;
 		this.deathAge = deathAge;
 		this.monetaryValue = monetaryValue;
