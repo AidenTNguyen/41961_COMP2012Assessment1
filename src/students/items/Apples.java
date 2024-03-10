@@ -29,7 +29,7 @@ public class Apples extends Food {
 	 * Method to return the number of instantiated apples as a string
 	 * @return number of instantiated apple instances
 	 */
-	public String getGenerationCount() {
+	public static String getGenerationCount() {
 		return "Number of instantiated apple objects: " + instanceCount;
 	}
 	

@@ -29,7 +29,7 @@ public class Grain extends Food{
 	 * Method to return the number of instantiated grains as a string
 	 * @return number of instantiated grain instances
 	 */
-	public String getGenerationCount() {
+	public static String getGenerationCount() {
 		return "Number of instantiated grain objects: " + instanceCount;
 	}
 	
