@@ -29,7 +29,7 @@ public class Item {
 	/**
 	 * Increments age by 1
 	 */
-	protected void tick() {
+	public void tick() {
 		this.age += 1;
 	}
 	
@@ -37,14 +37,9 @@ public class Item {
 	 * Sets Item age
 	 * @param age representing item's age
 	 */
-	protected void setAge(int age) {
+	public void setAge(int age) {
 		this.age = age;
 	}
-	
-	/**
-	 * Retrieves item's monetary value IF its age has passed age of maturity, meaning it's fully grown and harvestable. Otherwise returns 0.0
-	 * @return Item's monetary value
-	 */
 	
 	/**
 	 * method to determine whether item is dead or alive depending on age
@@ -55,8 +50,13 @@ public class Item {
 			return "Dead";
 		}
 		return "Alive";
+		
+	/**
+	 * Retrieves item's monetary value IF its age has passed age of maturity, meaning it's fully grown and harvestable. Otherwise returns 0.0
+	 * @return Item's monetary value
+	 */
 	}
-	protected double getValue() {
+	public double getValue() {
 		if (this.age > this.maturationAge) {
 			return this.monetaryValue;
 		}
