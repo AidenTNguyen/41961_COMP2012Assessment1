@@ -2,6 +2,8 @@ package students.items;
 
 public class Grain extends Food{
 
+	private static final double seedCost = 1.0; //Cost of grain seed to buy before being grown
+	
 	/**
 	 * Subclass Grain inherits from Food extending from Item
 	 */
