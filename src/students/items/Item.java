@@ -19,7 +19,7 @@ public class Item {
 	 * @param expectedLifespan the expected lifespan of the item
 	 * @param monetaryValue the value of the item
 	 */
-	public Item(int maturationAge, int expectedLifespan, double monetaryValue) {
+	public Item(int maturationAge, int expectedLifespan, double monetaryValue) { //monetaryValue set as a double as money usually involved decimals
 
 		this.maturationAge = maturationAge;
 		this.expectedLifespan = expectedLifespan;
