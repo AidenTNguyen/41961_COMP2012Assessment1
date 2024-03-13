@@ -13,7 +13,15 @@ public class Field {
 		this.height = height;
 		this.width = width;
 		fieldDimensions = new int[height][width];
-		
+	}
+	
+	public void tick() {
+		for (int[] rowIndex : fieldDimensions) { //Outer loop to iterate over array elements of 2D array
+			for (int columnIndex : rowIndex) { //Inner loop to iterate over int values on rowIndex arrays
+				columnIndex.tick();
+				
+			}
+		}
 	}
 	
 }
