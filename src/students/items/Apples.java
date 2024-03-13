@@ -9,7 +9,7 @@ public class Apples extends Food {
 	 * Subclass Apple inherits from Food extending from Item
 	 */
 	public Apples() {
-		super(3, 5, 3.0); //Apple has predetermiend values of maturity, expected lifespan and monetary value
+		super(3, 5, 3.0); //Apple has predetermined values of maturity, expected lifespan and monetary value
 		instanceCount++; //Increments the count of apple instances
 	}
 	
