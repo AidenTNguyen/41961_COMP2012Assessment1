@@ -23,25 +23,34 @@ public class Field {
 		fieldDimensions = new Item[height][width];
 		
 		//Logic to fill the dimensions of the Field object with soil
-		int rowIndex = 0;
-		int columnIndex = 0;
+		int rowIndex = 0; //Index's to iterate through 2D array of objects
+		
 		for (Item[] arrayRowHolder : fieldDimensions) { //Outer loop to iterate over array elements of 2D array
-			for (Item arrayColumnHolder : arrayRowHolder) { //Inner loop to iterate over int values on rowIndex arrays
+			
+			int columnIndex = 0; //Index resets to 0 everytime loop returns to outer loop
+			
+			for (Item columnElement : arrayRowHolder) { //Inner loop to iterate over Item elements held in arrayRowHolder
 				fieldDimensions[rowIndex][columnIndex] = new Soil();
 				columnIndex ++;
 			rowIndex ++;
 				
 			}
+		
 		}
 				
 	}
-		
-		
 	
-	public void tick() {
-		for (int[] rowIndex : fieldDimensions[].length) {
-			for (int columnIndex : rowIndex) {
-				columnIndex.tick();
+	@Override
+	public String toString() {
+		return 
+	}
+		
+		
+//	
+//	public void tick() {
+//		for (int[] rowIndex : fieldDimensions[].length) {
+//			for (int columnIndex : rowIndex) {
+//				columnIndex.tick();
 				
 			}
 		}
