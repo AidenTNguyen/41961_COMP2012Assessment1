@@ -1,5 +1,5 @@
 package students;
-import students.items.Item; //Importing Item class from student.items package to use in a 2D array
+import students.items.*; //Importing all classes from student.items for use in field.
 
 
 public class Field {
@@ -16,14 +16,16 @@ public class Field {
 		fieldDimensions = new Item[height][width];
 		
 		//Logic to fill the dimensions of the Field object with soil
-		for (Item[] rowIndex : fieldDimensions) { //Outer loop to iterate over array elements of 2D array
-			for (Item columnIndex : rowIndex) //Inner loop to iterate over int values on rowIndex arrays
+		for (int[] rowIndex : fieldDimensions) { //Outer loop to iterate over array elements of 2D array
+			for (int columnIndex : rowIndex) { //Inner loop to iterate over int values on rowIndex arrays
+				fieldDimensions[rowIndex][columnIndex] = new Soil();
+			}
 	}
 		
 		
 	
 	public void tick() {
-		for (int[] rowIndex : fieldDimensions) {
+		for (int[] rowIndex : fieldDimensions[].length) {
 			for (int columnIndex : rowIndex) {
 				columnIndex.tick();
 				
