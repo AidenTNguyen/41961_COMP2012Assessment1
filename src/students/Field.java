@@ -50,13 +50,13 @@ public class Field {
 //	}
 	
 	@Override
-	public String toString() {
-		Soil freshSoil = new Soil();
-		return for (Item[] rowIndex : fieldDimensions) {
-			for (Item columnIndex : rowIndex) {
-				freshSoil.toString();
-			}
-		}
-	}
+//	public String toString() {
+//		Soil freshSoil = new Soil();
+//		return for (Item[] rowIndex : fieldDimensions) {
+//			for (Item columnIndex : rowIndex) {
+//				freshSoil.toString();
+//			}
+//		}
+//	}
 	
 }
