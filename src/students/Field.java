@@ -50,6 +50,14 @@ public class Field {
 //	}
 	
 	@Override
+	public String toString() {
+		
+		//Outer loop iterating through y-axis
+			//print numbers "", 1, 2 until 10, 11 index total (print y-axis numbers)
+				//
+		
+	}
+	
 //	public String toString() {
 //		Soil freshSoil = new Soil();
 //		return for (Item[] rowIndex : fieldDimensions) {
