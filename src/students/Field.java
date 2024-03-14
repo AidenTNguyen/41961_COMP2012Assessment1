@@ -23,9 +23,11 @@ public class Field {
 		fieldDimensions = new Item[height][width];
 		
 		//Logic to fill the dimensions of the Field object with soil
-		for (int[] rowIndex : fieldDimensions) { //Outer loop to iterate over array elements of 2D array
-			for (int columnIndex : rowIndex) { //Inner loop to iterate over int values on rowIndex arrays
+		for (int[] arrayHolder : fieldDimensions) { //Outer loop to iterate over array elements of 2D array
+			int rowIndex = 0;
+			for (int columnIndex : arrayHolder) { //Inner loop to iterate over int values on rowIndex arrays
 				fieldDimensions[rowIndex][columnIndex] = new Soil();
+			rowIndex ++;
 				
 			}
 		}
