@@ -1,5 +1,5 @@
 package students;
-import students.items.*; //Importing all classes from student.items for use in field.
+import students.items.*; //Importing all classes from student.items for use in field
 
 
 public class Field {
