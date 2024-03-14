@@ -9,6 +9,13 @@ public class Field {
 	private static int width = 0;
 	private static Item[][] fieldDimensions; //This value holds a 2D array of objects
 	
+	
+	
+	/**
+	 * Creates a new field object storing values of height and width for later use in creating a 2D object array
+	 * @param height parameter taken for 2D object array
+	 * @param width parameter taken for 2D object array
+	 */
 	public Field(int height, int width) {
 
 		this.height = height;
@@ -19,7 +26,10 @@ public class Field {
 		for (int[] rowIndex : fieldDimensions) { //Outer loop to iterate over array elements of 2D array
 			for (int columnIndex : rowIndex) { //Inner loop to iterate over int values on rowIndex arrays
 				fieldDimensions[rowIndex][columnIndex] = new Soil();
+				
 			}
+		}
+				
 	}
 		
 		
