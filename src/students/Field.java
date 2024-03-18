@@ -165,17 +165,19 @@ public class Field {
 					totalValue += fieldDimensions[rowIndex][columnIndex].getValue();
 				}
 				
-				//below else if's do not require getValue() as these items have no value
+				//Soil is the only object without a value
 				else if (fieldDimensions[rowIndex][columnIndex] instanceof Soil) {
 					soilInstances++;
 				}
 				
 				else if (fieldDimensions[rowIndex][columnIndex] instanceof UntilledSoil) {
 					untilledInstances++;
+					totalValue += fieldDimensions[rowIndex][columnIndex].getValue();
 				}
 				
 				else {
 					weedInstances++;
+					totalValue += fieldDimensions[rowIndex][columnIndex].getValue();
 				}
 				
 		
