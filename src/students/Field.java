@@ -32,15 +32,18 @@ public class Field {
 		}
 				
 	}
-//	
-//	public void tick() {
-//		for (int[] rowIndex : fieldDimensions[].length) {
-//			for (int columnIndex : rowIndex) {
-//				columnIndex.tick();
-//				
-//			}
-//		}
-//	}
+	
+	/**
+	 * Method to call upon the Item superclass to invoke the tick() method on each element in Field
+	 */
+	public void tick() {
+		for (int rowIndex = 0; rowIndex < height; rowIndex ++) {
+			for (int columnIndex = 0; columnIndex < width; columnIndex++) {
+				fieldDimensions[rowIndex][columnIndex].tick();
+			}		
+		}
+	}
+	
 	
 	/**
 	 * returns a string representation of the Field object's 2D grid with assorted x and y axis coordinate numbers
