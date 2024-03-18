@@ -138,4 +138,17 @@ public class Field {
 		}
 		return totalValue;
 	}
+	
+	
+	
+	public String getSummary() {
+		
+		//variabes stores the number of item instances
+		int appleInstances = 0;
+		int grainInstances = 0;
+		int soilInstances = 0;
+		int untilledInstances = 0;
+		int weedInstances = 0;
+		
+	}
 }
