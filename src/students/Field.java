@@ -74,8 +74,11 @@ public class Field {
 			result += (rowIndex + 1) + "\n"; //x-axis number
 			
 			for (int columnIndex = 0; columnIndex < width; columnIndex++)
+				result += fieldDimensions[rowIndex][columnIndex] + " ";
 				
 			}
+		
+		return result;
 		}
 
 		
