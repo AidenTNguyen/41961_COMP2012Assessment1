@@ -66,7 +66,7 @@ public class Field {
 	 */
 	@Override
 	public String toString() {
-		String result = "  ";//placeholder string to hold the final String representation of the grid
+		String result = "   ";//placeholder string to hold the final String representation of the grid
 		
 		for (int columnIndex = 0; columnIndex < width; columnIndex++) {
 			result += (columnIndex + 1) + " "; //x-axis numbers			
@@ -75,6 +75,9 @@ public class Field {
 		
 		for (int rowIndex = 0; rowIndex < height; rowIndex++) {
 			result += (rowIndex + 1) + " "; //y-axis number
+			if (rowIndex < 9) { //logic to add a space after the x-axis coordinates are printed so the "10" doesnt throw the format off
+				result += " ";
+			}
 			
 			for (int columnIndex = 0; columnIndex < width; columnIndex++) {
 				result += fieldDimensions[rowIndex][columnIndex] + " ";
