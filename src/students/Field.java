@@ -122,4 +122,13 @@ public class Field {
 		fieldDimensions[xAxis][yAxis] = item;
 	}
 	
+	
+	
+	public double getValue() {
+		for (int rowIndex = 0; rowIndex < height; rowIndex ++) {
+			for (int columnIndex = 0; columnIndex < width; columnIndex++) {
+				fieldDimensions[rowIndex][columnIndex].getValue();
+			}
+		}
+	}
 }
