@@ -40,6 +40,14 @@ public class Field {
 		for (int rowIndex = 0; rowIndex < height; rowIndex ++) {
 			for (int columnIndex = 0; columnIndex < width; columnIndex++) {
 				fieldDimensions[rowIndex][columnIndex].tick();
+				
+				//If conditional to determine whether the Soil object will be turned into a Weed object
+				if (fieldDimensions[rowIndex][columnIndex] instanceof Soil) {
+					Double convertChance = Math.random();
+					if (convertChance <= 0.2) {
+						fieldDimensions[rowIndex][columnIndex] = new Weed();
+					}
+				}
 			}		
 		}
 	}
