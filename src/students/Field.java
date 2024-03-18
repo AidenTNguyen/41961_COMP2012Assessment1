@@ -140,7 +140,10 @@ public class Field {
 	}
 	
 	
-	
+	/**
+	 * Returns a string detailing the Field object and it's value and quantities
+	 * @return details on the Field object
+	 */
 	public String getSummary() {
 		
 		//variabes stores the number of item instances
@@ -179,7 +182,19 @@ public class Field {
 					weedInstances++;
 					totalValue += fieldDimensions[rowIndex][columnIndex].getValue();
 				}
-				
+			}
+		}
 		
+		String result = "";
+		result += "Apples:        " + appleInstances + "\n";
+		result += "Grain:         " + grainInstances + "\n";
+		result += "Soil:          " + soilInstances + "\n";
+		result += "Untilled:      " + untilledInstances + "\n";
+		result += "Weed:          " + weedInstances + "\n";
+		result += "For a total of: " + totalValue;
+		result += "Total apples created: " + appleInstances; //I'm not entirely sure what these two lines are for at the moment, they're made redundant by code above
+		result += "Total grain created: " + grainInstances;
+		
+		return result;
 	}
 }
