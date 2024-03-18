@@ -96,7 +96,8 @@ public class Field {
 	 * @return item at [xAxis][yAxis]
 	 */
 	public Item get(int xAxis, int yAxis) {
-		return fieldDimensions[xAxis][yAxis];
+		Item itemCopy = fieldDimensions[xAxis][yAxis];
+		return itemCopy; //Ensures the user cannot modify the element at this location
 	}
 
 	
