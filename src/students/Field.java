@@ -201,11 +201,11 @@ public class Field {
 		}
 		
 		String result = "";
-		result += "Mature Apples:  " + matureAppleInstances + "\n"; //returns only the mature number of apples in the field
-		result += "Mature Grains:  " + matureGrainInstances + "\n"; //^
-		result += "Soil:           " + soilInstances + "\n";
-		result += "Untilled:       " + untilledInstances + "\n";
-		result += "Weed:           " + weedInstances + "\n";
+		result += "Mature Apples:   " + matureAppleInstances + "\n"; //returns only the mature number of apples in the field
+		result += "Mature Grains:   " + matureGrainInstances + "\n"; //^
+		result += "Soil:            " + soilInstances + "\n";
+		result += "Untilled:        " + untilledInstances + "\n";
+		result += "Weed:            " + weedInstances + "\n";
 		result += "For a total of: $" + totalValue;
 		result += "\nTotal apples created: " + appleInstances; //returns total number of apple objects in the field
 		result += "\nTotal grain created: " + grainInstances; //^
