@@ -41,6 +41,11 @@ public class Field {
 			for (int columnIndex = 0; columnIndex < width; columnIndex++) {
 				fieldDimensions[rowIndex][columnIndex].tick();
 				
+				//If conditional to check whether the new age of the item means its dead
+				if (fieldDimensions[rowIndex][columnIndex].died() == true) {
+					fieldDimensions[rowIndex][columnIndex] = new UntilledSoil();
+				}
+				
 				//If conditional to determine whether the Soil object will be turned into a Weed object
 				if (fieldDimensions[rowIndex][columnIndex] instanceof Soil) {
 					Double convertChance = Math.random();
