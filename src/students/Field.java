@@ -88,6 +88,15 @@ public class Field {
 		return result;
 		}
 	
+	/**
+	 * Function to create a new Soil object at the designated location regardless of whats there
+	 * @param xAxis
+	 * @param yAxis
+	 */
+	public void till(int xAxis, int yAxis) {
+		fieldDimensions[xAxis][yAxis] = new Soil();
+	}
+	
 	
 	/**
 	 * Retrieves the item instance located at the inputted location
