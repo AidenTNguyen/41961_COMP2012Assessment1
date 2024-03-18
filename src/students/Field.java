@@ -65,9 +65,12 @@ public class Field {
 	public String toString() {
 		String result = "";//placeholder string to hold the final String representation of the grid
 		
-		for (int columnIndex = 0; columnIndex < height; columnIndex++) {
+		for (int columnIndex = 0; columnIndex < width; columnIndex++) {
 			result += columnIndex + " "; //y-axis numbers			
 		}
+		result += "\n";
+		
+
 		
 	}
 	
