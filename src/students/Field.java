@@ -150,5 +150,34 @@ public class Field {
 		int untilledInstances = 0;
 		int weedInstances = 0;
 		
+		Double totalValue = 0.0;
+		
+		for (int rowIndex = 0; rowIndex < height; rowIndex ++) {
+			for (int columnIndex = 0; columnIndex < width; columnIndex++) {
+				
+				if (fieldDimensions[rowIndex][columnIndex] instanceof Apples) {
+					appleInstances++;
+					totalValue += fieldDimensions[rowIndex][columnIndex].getValue();
+				}
+				
+				else if (fieldDimensions[rowIndex][columnIndex] instanceof Grain) {
+					grainInstances++;
+					totalValue += fieldDimensions[rowIndex][columnIndex].getValue();
+				}
+				
+				//below else if's do not require getValue() as these items have no value
+				else if (fieldDimensions[rowIndex][columnIndex] instanceof Soil) {
+					soilInstances++;
+				}
+				
+				else if (fieldDimensions[rowIndex][columnIndex] instanceof UntilledSoil) {
+					untilledInstances++;
+				}
+				
+				else {
+					weedInstances++;
+				}
+				
+		
 	}
 }
