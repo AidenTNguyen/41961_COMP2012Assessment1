@@ -123,7 +123,10 @@ public class Field {
 	}
 	
 	
-	
+	/**
+	 * returns the total value of all items in the field
+	 * @return total value
+	 */
 	public double getValue() {
 		
 		Double totalValue = 0.0;
