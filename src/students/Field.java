@@ -63,10 +63,11 @@ public class Field {
 	
 	@Override
 	public String toString() {
+		String result = "";//placeholder string to hold the final String representation of the grid
 		
-		//Outer loop iterating through y-axis
-			//print numbers "", 1, 2 until 10, 11 index total (print y-axis numbers)
-				//
+		for (int rowIndex = 0; rowIndex < height; rowIndex++) {
+			result += rowIndex + " "; //y-axis numbers
+		}
 		
 	}
 	
