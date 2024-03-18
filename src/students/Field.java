@@ -191,9 +191,9 @@ public class Field {
 		result += "Soil:          " + soilInstances + "\n";
 		result += "Untilled:      " + untilledInstances + "\n";
 		result += "Weed:          " + weedInstances + "\n";
-		result += "For a total of: " + totalValue;
-		result += "Total apples created: " + appleInstances; //I'm not entirely sure what these two lines are for at the moment, they're made redundant by code above
-		result += "Total grain created: " + grainInstances;
+		result += "For a total of: $" + totalValue;
+		result += "\nTotal apples created: " + appleInstances; //I'm not entirely sure what these two lines are for at the moment, they're made redundant by code above
+		result += "\nTotal grain created: " + grainInstances;
 		
 		return result;
 	}
