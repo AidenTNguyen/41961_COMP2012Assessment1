@@ -33,6 +33,7 @@ public class Field {
 				
 	}
 	
+	
 	/**
 	 * Method to call upon the Item superclass to invoke the tick() method on each element in Field
 	 */
@@ -88,6 +89,7 @@ public class Field {
 		return result;
 		}
 	
+	
 	/**
 	 * Function to create a new Soil object at the designated location regardless of whats there
 	 * @param xAxis
@@ -95,16 +97,6 @@ public class Field {
 	 */
 	public void till(int xAxis, int yAxis) {
 		fieldDimensions[xAxis][yAxis] = new Soil();
-	}
-	
-	/**
-	 * Creates a new instance of a derived Item class at given location
-	 * @param xAxis
-	 * @param yAxis
-	 * @param item a fruit of some kind.
-	 */
-	public void plant(int xAxis, int yAxis, Item item) {
-		fieldDimensions[xAxis][yAxis] = item;
 	}
 	
 	
@@ -120,5 +112,14 @@ public class Field {
 	}
 
 	
+	/**
+	 * Creates a new instance of a derived Item class at given location
+	 * @param xAxis
+	 * @param yAxis
+	 * @param item a fruit of some kind.
+	 */
+	public void plant(int xAxis, int yAxis, Item item) {
+		fieldDimensions[xAxis][yAxis] = item;
+	}
 	
 }
