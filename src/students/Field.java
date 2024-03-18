@@ -61,6 +61,9 @@ public class Field {
 //		}
 //	}
 	
+	/**
+	 * returns a string representation of the Field object's 2D grid with assorted x and y axis coordinate numbers
+	 */
 	@Override
 	public String toString() {
 		String result = "";//placeholder string to hold the final String representation of the grid
@@ -80,9 +83,18 @@ public class Field {
 		
 		return result;
 		}
-
-		
+	
+	
+	/**
+	 * Retrieves the item instance located at the inputted location
+	 * @param xAxis
+	 * @param yAxis
+	 * @return item at [xAxis][yAxis]
+	 */
+	public Item get(int xAxis, int yAxis) {
+		return fieldDimensions[xAxis][yAxis];
 	}
+
 	
 	
 }
