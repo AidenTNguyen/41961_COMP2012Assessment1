@@ -22,25 +22,6 @@ public class Field {
 		this.width = width;
 		fieldDimensions = new Item[height][width];
 		
-//		Soil creation logic v1
-//		//Logic to fill the dimensions of the Field object with soil
-//		int rowIndex = 0; //Index's to iterate through 2D array of objects
-//		
-//		for (Item[] arrayRowHolder : fieldDimensions) { 
-//			
-//			int columnIndex = 0; //Index representing x-axis of 2D array
-//			
-//			for (Item columnElement : arrayRowHolder) { 
-//				fieldDimensions[rowIndex][columnIndex] = new Soil();
-//				columnIndex ++;
-//			rowIndex ++;
-//				
-//			}
-//		
-//		}
-		
-		
-//		Soil creation logic v2
 		for (int rowIndex = 0; rowIndex < height; rowIndex++) {
 			
 			for (int columnIndex = 0; columnIndex < width; columnIndex++) {
