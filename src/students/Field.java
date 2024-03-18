@@ -125,10 +125,14 @@ public class Field {
 	
 	
 	public double getValue() {
+		
+		Double totalValue = 0.0;
+		
 		for (int rowIndex = 0; rowIndex < height; rowIndex ++) {
 			for (int columnIndex = 0; columnIndex < width; columnIndex++) {
-				fieldDimensions[rowIndex][columnIndex].getValue();
+				totalValue += fieldDimensions[rowIndex][columnIndex].getValue();
 			}
 		}
+		return totalValue;
 	}
 }
