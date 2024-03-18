@@ -65,22 +65,21 @@ public class Field {
 	public String toString() {
 		String result = "";//placeholder string to hold the final String representation of the grid
 		
-		for (int columnIndex = 0; columnIndex < width; columnIndex++) {
-			result += columnIndex + " "; //y-axis numbers			
+		for (int columnIndex = 0; columnIndex <= width; columnIndex++) {
+			result += (columnIndex + 1) + " "; //y-axis numbers			
 		}
 		result += "\n";
 		
+		for (int rowIndex = 0; rowIndex <= height; rowIndex++) {
+			result += (rowIndex + 1) + "\n"; //x-axis number
+			
+			for (int columnIndex = 0)
+				
+			}
+		}
 
 		
 	}
 	
-//	public String toString() {
-//		Soil freshSoil = new Soil();
-//		return for (Item[] rowIndex : fieldDimensions) {
-//			for (Item columnIndex : rowIndex) {
-//				freshSoil.toString();
-//			}
-//		}
-//	}
 	
 }
