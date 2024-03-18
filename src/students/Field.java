@@ -97,6 +97,16 @@ public class Field {
 		fieldDimensions[xAxis][yAxis] = new Soil();
 	}
 	
+	/**
+	 * Creates a new instance of a derived Item class at given location
+	 * @param xAxis
+	 * @param yAxis
+	 * @param item a fruit of some kind.
+	 */
+	public void plant(int xAxis, int yAxis, Item item) {
+		fieldDimensions[xAxis][yAxis] = item;
+	}
+	
 	
 	/**
 	 * Retrieves the item instance located at the inputted location
