@@ -38,7 +38,7 @@ public class Marker {
 		System.out.println(testField.get(3, 3)); //should print "."
 		System.out.println(testField); //should print the field
 		System.out.println(testField.getValue()); //should print 0
-		a = new Apples();
+		Item a = new Apples();
 		a.setAge(5);
 		testField.plant(0, 0, a);
 		System.out.println(testField.getValue()); //should print 3
