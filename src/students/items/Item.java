@@ -50,12 +50,12 @@ public class Item {
 			return true;
 		}
 		return false;
+	}
 		
 	/**
 	 * Retrieves item's monetary value IF its age has passed age of maturity, meaning it's fully grown and harvestable. Otherwise returns 0.0
 	 * @return copy of Item's monetary value
 	 */
-	}
 	public double getValue() {
 		if (this.age > this.maturationAge) {
 			double monetaryValueCopy = this.monetaryValue;
