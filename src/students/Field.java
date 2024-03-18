@@ -66,19 +66,23 @@ public class Field {
 	 */
 	@Override
 	public String toString() {
-		String result = "";//placeholder string to hold the final String representation of the grid
+		String result = "  ";//placeholder string to hold the final String representation of the grid
 		
 		for (int columnIndex = 0; columnIndex < width; columnIndex++) {
-			result += (columnIndex + 1) + " "; //y-axis numbers			
+			result += (columnIndex + 1) + " "; //x-axis numbers			
 		}
 		result += "\n";
 		
 		for (int rowIndex = 0; rowIndex < height; rowIndex++) {
-			result += (rowIndex + 1) + "\n"; //x-axis number
+			result += (rowIndex + 1) + " "; //y-axis number
 			
-			for (int columnIndex = 0; columnIndex < width; columnIndex++)
+			for (int columnIndex = 0; columnIndex < width; columnIndex++) {
 				result += fieldDimensions[rowIndex][columnIndex] + " ";
 				
+					if (columnIndex == (width - 1)) { //this if conditional is to move to the next line if all columns in the row have ben printed
+						result += "\n";
+					}
+				}
 			}
 		
 		return result;
