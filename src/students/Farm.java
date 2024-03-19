@@ -1,5 +1,7 @@
 package students;
 
+import java.util.Scanner; //For user input
+
 public class Farm {
 	
 	private int fieldWidth = 0;
