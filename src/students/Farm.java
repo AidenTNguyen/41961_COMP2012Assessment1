@@ -8,6 +8,12 @@ public class Farm {
 	private int fieldHeight = 0;
 	private double startingFunds = 0.0;
 	
+	/**
+	 * Farm class constructed with a width & height parameter to be used in creating a new Field object
+	 * @param fieldWidth
+	 * @param fieldHeight
+	 * @param startingFunds dictates how much money the player starts with
+	 */
 	public Farm(int fieldWidth, int fieldHeight, double startingFunds) {
 		
 		this.fieldWidth = fieldWidth;
