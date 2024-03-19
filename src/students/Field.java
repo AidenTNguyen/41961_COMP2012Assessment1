@@ -95,8 +95,8 @@ public class Field {
 	 * @param xAxis
 	 * @param yAxis
 	 */
-	public void till(int xAxis, int yAxis) {
-		fieldDimensions[xAxis][yAxis] = new Soil();
+	public void till(int yAxis, int xAxis) {
+		fieldDimensions[yAxis][xAxis] = new Soil();
 	}
 	
 	
@@ -106,8 +106,8 @@ public class Field {
 	 * @param yAxis
 	 * @return item at [xAxis][yAxis]
 	 */
-	public Item get(int xAxis, int yAxis) {
-		Item itemCopy = fieldDimensions[xAxis][yAxis];
+	public Item get(int yAxis, int xAxis) {
+		Item itemCopy = fieldDimensions[yAxis][xAxis];
 		return itemCopy; //Ensures the user cannot modify the element at this location
 	}
 
@@ -118,8 +118,8 @@ public class Field {
 	 * @param yAxis
 	 * @param item a fruit of some kind.
 	 */
-	public void plant(int xAxis, int yAxis, Item item) {
-		fieldDimensions[xAxis][yAxis] = item;
+	public void plant(int yAxis, int xAxis, Item item) {
+		fieldDimensions[yAxis][xAxis] = item;
 	}
 	
 	
