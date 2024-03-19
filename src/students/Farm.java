@@ -21,11 +21,19 @@ public class Farm {
 		this.startingFunds = startingFunds;
 	}
 	
+	
+	
 	public void run() {
 		
-		Farm simFarm = new Farm(10, 10, 10.0);
 		Field gameField = new Field(this.fieldWidth, this.fieldHeight); //Using Farm's height and width as the parameters for a field object
 		
 	}
 	
+	
+	
+	public static void main(String[] args) {
+		
+		Farm simFarm = new Farm(10, 10, 10.0);
+		simFarm.run();
+	}
 }
