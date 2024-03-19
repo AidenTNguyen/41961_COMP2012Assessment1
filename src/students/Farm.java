@@ -2,7 +2,7 @@ package students;
 
 public class Farm {
 	
-	public Farm(int fieldWidth, int fieldHeight, int startingFunds)
+	public Farm(int fieldWidth, int fieldHeight, double startingFunds)
 	{
 	}
 	
