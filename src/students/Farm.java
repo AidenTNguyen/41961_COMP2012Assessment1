@@ -26,7 +26,12 @@ public class Farm {
 	public void run() { //Function to initiate the game
 		
 		Field gameField = new Field(this.fieldWidth, this.fieldHeight); //Using Farm's height and width as the parameters for a field object
-		menuPrompt(gameField);
+		
+		boolean activeGame = true;
+		
+		while (activeGame) {
+			menuPrompt(gameField);
+		}
 	}
 	
 	
