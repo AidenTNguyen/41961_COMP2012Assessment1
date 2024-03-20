@@ -36,18 +36,20 @@ public class Farm {
 			String finalUserInput = stringFinalizer(rawUserInput); //Formatted user input to be used below
 			
 			char commandChar = finalUserInput.charAt(0);
-			int[] coordinates = getCoordinates(finalUserInput);
 			
 			if (commandChar == 't' || commandChar == 'h' || commandChar == 's') { //If conditional to check whether or not user input is for a command that requires coordinates
 				
-				if (coordinates[0] > fieldHeight || coordinates[1] > fieldWidth) { // is the user's coordinate inputs outside the bounds of the field
+				int[] coordinates = getCoordinates(finalUserInput);
+				
+				if (coordinates[0] <= fieldHeight || coordinates[1] <= fieldWidth) { // is the user's coordinate inputs outside the bounds of the field
 					//
 					
 				} else {
-					System.out.println("Error, coordinates exceed the bounds of the field");
+					System.out.println("Error, coordinates exceed the bounds of the field\n");
 				}
 			}
 			
+			//Rest of the user options that dont require coordinates
 			else if (finalUserInput.charAt(0) == 's') {
 				//
 			}
