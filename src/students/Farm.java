@@ -35,18 +35,26 @@ public class Farm {
 			String rawUserInput = scannerObject.nextLine().toLowerCase(); //Converts the user input to lower case for added formatting
 			String finalUserInput = stringFinalizer(rawUserInput); //Formatted user input to be used below
 			
-			if (finalUserInput.charAt(0) == 't') {
-				int[] coordinates = getCoordinates(finalUserInput);
-				gameField.till(coordinates[0], coordinates[1]);
+			char commandChar = finalUserInput.charAt(0);
+			int[] coordinates = getCoordinates(finalUserInput);
+			
+			if (commandChar == 't' || commandChar == 'h' || commandChar == 's') {
+				
+				if (coordinates[0] > gameField.height || coordinates[1] > gameField.width)
 			}
 			
-			else if (finalUserInput.charAt(0) == 'h') {
-				//
-			}
-			
-			else if (finalUserInput.charAt(0) == 'p') {
-				//
-			}
+//			if (finalUserInput.charAt(0) == 't') {
+//				int[] coordinates = getCoordinates(finalUserInput);
+//				gameField.till(coordinates[0], coordinates[1]);
+//			}
+//			
+//			else if (finalUserInput.charAt(0) == 'h') {
+//				//
+//			}
+//			
+//			else if (finalUserInput.charAt(0) == 'p') {
+//				//
+//			}
 			
 			else if (finalUserInput.charAt(0) == 's') {
 				//
