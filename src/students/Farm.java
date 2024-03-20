@@ -32,8 +32,8 @@ public class Farm {
 		
 		while (activeGame) {
 			menuPrompt(gameField);
-			String rawUserInput = scannerObject.nextLine();
-			String finalUserInput = rawUserInput.replaceAll("\\s", ""); //This process is to output a String which works with the following sorting algorithim
+			String rawUserInput = scannerObject.nextLine().toLowerCase(); //Converts the user input to lower case for added formatting
+			String finalUserInput = stringFinalizer(rawUserInput); //Formatted user input to be used below
 			
 			if (finalUserInput.charAt(0) == 't') {
 				//
@@ -89,20 +89,17 @@ public class Farm {
 	}
 	
 	
-	
-//	private boolean requiresCoordinates(String input) {
-//		
-//		switch(input.charAt(0)) {
-//		
-//			// Cases for if the user input requires coordinates also
-//			case 't':
-//			case 'h':
-//			case 'p':
-//				return true;
-//			default:
-//				return false;
-//		}
-//	}
+	/**
+	 * This function removes leading and trailing whitespaces for use in menu prompt selection
+	 * @param input
+	 * @return formatted string
+	 */
+	private String stringFinalizer(String input) {
+		
+		String[] parts = input.split("\\s+");
+		String finalString = String.join(" ", parts);
+		return finalString;
+	}
 	
 	
 	/**
