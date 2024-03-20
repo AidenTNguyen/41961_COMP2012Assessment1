@@ -26,14 +26,19 @@ public class Farm {
 	public void run() { //Function to initiate the game
 		
 		Field gameField = new Field(this.fieldWidth, this.fieldHeight); //Using Farm's height and width as the parameters for a field object
-		menuPrompt();
+		menuPrompt(gameField);
 	}
 	
 	
-	
-	private void menuPrompt() {
+	/**
+	 * Function to print the field, current funds and menu options
+	 * @param field designated for print
+	 */
+	private void menuPrompt(Field field) {
 		
-		System.out.println("Bank balance: $" + startingFunds + "\n");
+		System.out.print(field);
+		
+		System.out.println("\nBank balance: $" + startingFunds + "\n");
 		
 		System.out.println("Enter your next action:");
 		System.out.println("  t [x] [y]: till");
