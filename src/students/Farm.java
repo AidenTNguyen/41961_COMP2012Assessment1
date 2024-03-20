@@ -43,6 +43,20 @@ public class Farm {
 		
 	}
 	
+	
+	/**
+	 * Function to return value of item if past maturity and to replace with UntilledSoil object
+	 * @param rowIndex
+	 * @param columnIndex
+	 * @return string confirming harvest outcome
+	 */
+//	private static String harvest(int rowIndex, int columnIndex) {
+//		
+//		return "item has been harvested for $#";
+//	}
+	
+	
+	
 	public static void main(String[] args) {
 		
 		Farm simFarm = new Farm(10, 10, 10.0);
