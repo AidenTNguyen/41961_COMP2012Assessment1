@@ -31,7 +31,9 @@ public class Farm {
 	
 	
 	
-	private static void menuPrompt() {
+	private void menuPrompt() {
+		
+		System.out.println("Bank balance: $" + startingFunds + "\n");
 		
 		System.out.println("Enter your next action:");
 		System.out.println("  t [x] [y]: till");
@@ -82,6 +84,7 @@ public class Farm {
 //	private static void quit() {
 //		
 //	}
+	
 	
 	
 	public static void main(String[] args) {
