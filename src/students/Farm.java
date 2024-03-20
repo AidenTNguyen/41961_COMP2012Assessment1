@@ -26,10 +26,22 @@ public class Farm {
 	public void run() {
 		
 		Field gameField = new Field(this.fieldWidth, this.fieldHeight); //Using Farm's height and width as the parameters for a field object
-		
+		menuPrompt();
 	}
 	
 	
+	
+	private static void menuPrompt() {
+		
+		System.out.println("Enter your next action:");
+		System.out.println("  t [x] [y]: till");
+		System.out.println("  h [x] [y]: harvest");
+		System.out.println("  p [x] [y]: plant");
+		System.out.println("  s: field summary");
+		System.out.println("  w: wait");
+		System.out.println("  q: quit");
+		
+	}
 	
 	public static void main(String[] args) {
 		
