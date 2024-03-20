@@ -38,25 +38,15 @@ public class Farm {
 			char commandChar = finalUserInput.charAt(0);
 			int[] coordinates = getCoordinates(finalUserInput);
 			
-			if (commandChar == 't' || commandChar == 'h' || commandChar == 's') {
+			if (commandChar == 't' || commandChar == 'h' || commandChar == 's') { //If conditional to check whether or not user input is for a command that requires coordinates
 				
-				if (coordinates[0] > fieldHeight || coordinates[1] > fieldWidth) {
+				if (coordinates[0] > fieldHeight || coordinates[1] > fieldWidth) { // is the user's coordinate inputs outside the bounds of the field
+					//
 					
+				} else {
+					System.out.println("Error, coordinates exceed the bounds of the field");
 				}
 			}
-			
-//			if (finalUserInput.charAt(0) == 't') {
-//				int[] coordinates = getCoordinates(finalUserInput);
-//				gameField.till(coordinates[0], coordinates[1]);
-//			}
-//			
-//			else if (finalUserInput.charAt(0) == 'h') {
-//				//
-//			}
-//			
-//			else if (finalUserInput.charAt(0) == 'p') {
-//				//
-//			}
 			
 			else if (finalUserInput.charAt(0) == 's') {
 				//
