@@ -40,7 +40,9 @@ public class Farm {
 			
 			if (commandChar == 't' || commandChar == 'h' || commandChar == 's') {
 				
-				if (coordinates[0] > gameField.height || coordinates[1] > gameField.width)
+				if (coordinates[0] > fieldHeight || coordinates[1] > fieldWidth) {
+					
+				}
 			}
 			
 //			if (finalUserInput.charAt(0) == 't') {
