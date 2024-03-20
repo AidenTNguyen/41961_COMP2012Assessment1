@@ -93,11 +93,11 @@ public class Field {
 	
 	/**
 	 * Function to create a new Soil object at the designated location regardless of whats there
-	 * @param xAxis
-	 * @param yAxis
+	 * @param rowIndex
+	 * @param columnIndex
 	 */
-	public void till(int yAxis, int xAxis) {
-		fieldDimensions[yAxis][xAxis] = new Soil();
+	public void till(int rowIndex, int columnIndex) {
+		fieldDimensions[rowIndex][columnIndex] = new Soil();
 	}
 	
 	
@@ -105,22 +105,22 @@ public class Field {
 	 * Retrieves the item instance located at the inputted location
 	 * @param xAxis
 	 * @param yAxis
-	 * @return item at [xAxis][yAxis]
+	 * @return item at [rowIndex][columnIndex]
 	 */
-	public Item get(int yAxis, int xAxis) {
-		Item itemCopy = fieldDimensions[yAxis][xAxis];
+	public Item get(int rowIndex, int columnIndex) {
+		Item itemCopy = fieldDimensions[rowIndex][columnIndex];
 		return itemCopy; //Ensures the user cannot modify the element at this location
 	}
 
 	
 	/**
 	 * Creates a new instance of a derived Item class at given location
-	 * @param xAxis
-	 * @param yAxis
+	 * @param rowIndex
+	 * @param columnIndex
 	 * @param item a fruit of some kind.
 	 */
-	public void plant(int yAxis, int xAxis, Item item) {
-		fieldDimensions[yAxis][xAxis] = item;
+	public void plant(int rowIndex, int columnIndex, Item item) {
+		fieldDimensions[rowIndex][columnIndex] = item;
 	}
 	
 	
