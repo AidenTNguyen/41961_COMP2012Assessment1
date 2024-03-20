@@ -103,6 +103,22 @@ public class Farm {
 	
 	
 	/**
+	 * This function separates the command part of a user input from the coordinates
+	 * @param input from the user consisting of a command letter followed by two coordinates
+	 * @return an array of two integers representing the coordinates extracted from the input
+	 */
+	private int[] getCoordinates(String input) {
+		String[] parts = input.split("\\s+");
+		int[] coordinates = new int[2];
+		
+		for (int index = 0; index < 2; index++) {
+			coordinates[index] = Integer.parseInt(parts[index+1]); //converting the strings at index 1 and 2 into integers from parts into coordinates
+		}
+		return coordinates;
+	}
+	
+	
+	/**
 	 * Function to return value of item if past maturity and to replace with UntilledSoil object
 	 * @param rowIndex
 	 * @param columnIndex
