@@ -32,29 +32,30 @@ public class Farm {
 		
 		while (activeGame) {
 			menuPrompt(gameField);
-			String userInput = scannerObject.nextLine();
+			String rawUserInput = scannerObject.nextLine();
+			String finalUserInput = rawUserInput.replaceAll("\\s", ""); //This process is to output a String which works with the following sorting algorithim
 			
-			if (userInput.equals("t")) {
+			if (finalUserInput.charAt(0) == 't') {
 				//
 			}
 			
-			else if (userInput.equals("h")) {
+			else if (finalUserInput.charAt(0) == 'h') {
 				//
 			}
 			
-			else if (userInput.equals("p")) {
+			else if (finalUserInput.charAt(0) == 'p') {
 				//
 			}
 			
-			else if (userInput.equals("s")) {
+			else if (finalUserInput.charAt(0) == 's') {
 				//
 			}
 			
-			else if (userInput.equals("w")) {
+			else if (finalUserInput.charAt(0) == 'w') {
 				//
 			}
 			
-			else if (userInput.equals("q")) {
+			else if (finalUserInput.charAt(0) == 'q') {
 				activeGame = false;
 			}
 			
@@ -86,6 +87,22 @@ public class Farm {
 		System.out.println("  q: quit");
 		
 	}
+	
+	
+	
+//	private boolean requiresCoordinates(String input) {
+//		
+//		switch(input.charAt(0)) {
+//		
+//			// Cases for if the user input requires coordinates also
+//			case 't':
+//			case 'h':
+//			case 'p':
+//				return true;
+//			default:
+//				return false;
+//		}
+//	}
 	
 	
 	/**
