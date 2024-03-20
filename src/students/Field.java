@@ -103,8 +103,8 @@ public class Field {
 	
 	/**
 	 * Retrieves the item instance located at the inputted location
-	 * @param xAxis
-	 * @param yAxis
+	 * @param rowIndex
+	 * @param columnIndex
 	 * @return item at [rowIndex][columnIndex]
 	 */
 	public Item get(int rowIndex, int columnIndex) {
