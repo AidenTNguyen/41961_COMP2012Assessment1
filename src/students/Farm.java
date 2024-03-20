@@ -36,7 +36,8 @@ public class Farm {
 			String finalUserInput = stringFinalizer(rawUserInput); //Formatted user input to be used below
 			
 			if (finalUserInput.charAt(0) == 't') {
-				//
+				int[] coordinates = getCoordinates(finalUserInput);
+				gameField.till(coordinates[0], coordinates[1]);
 			}
 			
 			else if (finalUserInput.charAt(0) == 'h') {
