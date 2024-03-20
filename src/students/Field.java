@@ -142,18 +142,6 @@ public class Field {
 	
 	
 	/**
-	 * Function to "harvest" an item in the field if its past maturation thus replacing it with UntilledSoil object
-	 * @param rowIndex
-	 * @param columnIndex
-	 * @return 
-	 */
-	public double harvest(int rowIndex,int columnIndex) {
-		
-		return fieldDimensions[rowIndex][columnIndex].getValue();
-	}
-	
-	
-	/**
 	 * Returns a string detailing the Field object and it's value and quantities
 	 * @return details on the Field object
 	 */
