@@ -23,7 +23,7 @@ public class Farm {
 	
 	
 	
-	public void run() {
+	public void run() { //Function to initiate the game
 		
 		Field gameField = new Field(this.fieldWidth, this.fieldHeight); //Using Farm's height and width as the parameters for a field object
 		menuPrompt();
@@ -53,6 +53,18 @@ public class Farm {
 //	private static String harvest(int rowIndex, int columnIndex) {
 //		
 //		return "item has been harvested for $#";
+//	}
+	
+	
+	/**
+	 * Function to replace current object in x & y with an item
+	 * @param rowIndex
+	 * @param columnIndex
+	 * @return String confirming planting outcome
+	 */
+//	private static String plant(int rowIndex, int columnIndex) {
+//		
+//		return "Item has been successfully planted in x,y";
 //	}
 	
 	
