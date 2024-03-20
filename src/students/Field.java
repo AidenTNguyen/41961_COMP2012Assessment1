@@ -9,7 +9,8 @@ public class Field {
 	private int width = 0;
 	private Item[][] fieldDimensions; //This value holds a 2D array of objects
 	
-	
+	private int totalAppleInstances = 0; //Variables to be used in getSummary() reflecting total instances of said item
+	private int totalGrainInstances = 0;
 	
 	/**
 	 * Creates a new field object storing values of height and width for later use in creating a 2D object array
@@ -148,11 +149,7 @@ public class Field {
 		
 		//variabes stores the number of item instances
 		int appleInstances = 0;
-		int matureAppleInstances = 0;
-		
 		int grainInstances = 0;
-		int matureGrainInstances = 0;
-		
 		int soilInstances = 0;
 		int untilledInstances = 0;
 		int weedInstances = 0;
@@ -166,20 +163,12 @@ public class Field {
 					
 					appleInstances++;
 					totalValue += fieldDimensions[rowIndex][columnIndex].getValue();
-					//If conditional to check whether or not the current element is mature by checking getValue return value is not 0.0 (return value if item is not mature)
-					if (fieldDimensions[rowIndex][columnIndex].getValue() != 0.0) {
-						matureAppleInstances++;
-					}
 				}
 				
 				else if (fieldDimensions[rowIndex][columnIndex] instanceof Grain) {
 					
 					grainInstances++;
 					totalValue += fieldDimensions[rowIndex][columnIndex].getValue();
-					
-					if (fieldDimensions[rowIndex][columnIndex].getValue() != 0.0) {
-						matureGrainInstances++;
-					}
 				}
 				
 				//Soil is the only object without a value
@@ -201,14 +190,14 @@ public class Field {
 		}
 		
 		String result = "";
-		result += "Mature Apples:   " + matureAppleInstances + "\n"; //returns only the mature number of apples in the field
-		result += "Mature Grains:   " + matureGrainInstances + "\n"; //^
+		result += "Apples:          " + appleInstances + "\n";
+		result += "Grains:          " + grainInstances + "\n";
 		result += "Soil:            " + soilInstances + "\n";
 		result += "Untilled:        " + untilledInstances + "\n";
 		result += "Weed:            " + weedInstances + "\n";
 		result += "For a total of: $" + totalValue;
-		result += "\nTotal apples created: " + appleInstances; //returns total number of apple objects in the field
-		result += "\nTotal grain created: " + grainInstances; //^
+		result += "\nTotal apples created: " + totalAppleInstances; //returns total number of apple objects in the field
+		result += "\nTotal grain created: " + totalGrainInstances; //^
 		
 		return result;
 	}
