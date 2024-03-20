@@ -28,10 +28,42 @@ public class Farm {
 		Field gameField = new Field(this.fieldWidth, this.fieldHeight); //Using Farm's height and width as the parameters for a field object
 		
 		boolean activeGame = true;
+		Scanner scannerObject = new Scanner(System.in);
 		
 		while (activeGame) {
 			menuPrompt(gameField);
+			String userInput = scannerObject.nextLine();
+			
+			if (userInput.equals("t")) {
+				//
+			}
+			
+			else if (userInput.equals("h")) {
+				//
+			}
+			
+			else if (userInput.equals("p")) {
+				//
+			}
+			
+			else if (userInput.equals("s")) {
+				//
+			}
+			
+			else if (userInput.equals("w")) {
+				//
+			}
+			
+			else if (userInput.equals("q")) {
+				activeGame = false;
+			}
+			
+			else {
+				System.out.println("Invalid input. Please try again.");
+			}
 		}
+		
+		scannerObject.close();
 	}
 	
 	
