@@ -5,9 +5,9 @@ import students.items.*; //Importing all classes from student.items for use in f
 public class Field {
 	
 	//Class variables for height and width of field
-	private static int height = 0;
-	private static int width = 0;
-	private static Item[][] fieldDimensions; //This value holds a 2D array of objects
+	private int height = 0;
+	private int width = 0;
+	private Item[][] fieldDimensions; //This value holds a 2D array of objects
 	
 	
 	
