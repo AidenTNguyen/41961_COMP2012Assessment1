@@ -68,6 +68,21 @@ public class Farm {
 //	}
 	
 	
+	/**
+	 * Function to skip a turn
+	 */
+//	private void wait() {
+//		
+//	}
+	
+	
+	/**
+	 * Function to exit out of the game loop
+	 */
+//	private static void quit() {
+//		
+//	}
+	
 	
 	public static void main(String[] args) {
 		
