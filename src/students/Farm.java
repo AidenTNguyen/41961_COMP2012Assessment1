@@ -37,16 +37,21 @@ public class Farm {
 			
 			char commandChar = finalUserInput.charAt(0);
 			
-			if (commandChar == 't' || commandChar == 'h' || commandChar == 's') { //If conditional to check whether or not user input is for a command that requires coordinates
+			if (commandChar == 't' || commandChar == 'h' || commandChar == 'p') { //If conditional to check whether or not user input is for a command that requires coordinates
 				
 				int[] coordinates = getCoordinates(finalUserInput);
 				
-				if (coordinates[0] <= fieldHeight || coordinates[1] <= fieldWidth) { // is the user's coordinate inputs outside the bounds of the field
-					//
+				if (coordinates != null && (coordinates[0] > fieldHeight || coordinates[1] > fieldWidth)) { // is the user's coordinate inputs outside the bounds of the field
 					
-				} else {
-					System.out.println("Error, coordinates exceed the bounds of the field\n");
-				}
+					System.out.println("Error: Invalid coordinates. Coordinates must be integers and within the bounds of the field.\n");
+					
+				} 
+				
+				else 
+					{
+						//
+					}
+				
 			}
 			
 			//Rest of the user options that dont require coordinates
@@ -69,6 +74,9 @@ public class Farm {
 		
 		scannerObject.close();
 	}
+	
+	
+	
 	
 	
 	/**
@@ -115,10 +123,18 @@ public class Farm {
 		int[] coordinates = new int[2];
 		
 		for (int index = 0; index < 2; index++) {
-			coordinates[index] = Integer.parseInt(parts[index+1]); //converting the strings at index 1 and 2 into integers from parts into coordinates
+			try {
+				coordinates[index] = Integer.parseInt(parts[index+1]); //converting the strings at index 1 and 2 into integers from parts into coordinates
+			} 
+			
+			catch (NumberFormatException e) {
+				return null; // Error to be handled by the caller
+			}
+
 		}
 		return coordinates;
 	}
+	
 	
 	
 	/**
