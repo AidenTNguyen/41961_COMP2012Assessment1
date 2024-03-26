@@ -2,8 +2,10 @@ package students;
 
 import java.text.DecimalFormat;
 
+import student.interfaces.ItemInterface;
+
 // This class will control and regulate any boons or modifiers added to the game
-public class GameController {
+public class GameController implements ItemInterface {
 	
 	private static double winCost = 15;
 	private static double growthRateMultiplier = 1.5; // This may be changed with a difficulty level system

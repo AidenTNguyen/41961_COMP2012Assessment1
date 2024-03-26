@@ -1,10 +1,12 @@
 package students.items;
 
+import student.interfaces.ItemInterface;
+
 /**
  * Represents the base class of all foods.
  */
 
-public class Item {
+public class Item implements ItemInterface{
 	
 	//Variables to be used in constructing of Item objects
 	protected int age = 0;
