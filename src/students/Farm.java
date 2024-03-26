@@ -32,6 +32,8 @@ public class Farm {
 	
 	public void run() { //Function to initiate the game
 		
+		int turn = 1;
+		
 		boolean activeGame = true;
 		
 		while (activeGame) {
@@ -42,7 +44,7 @@ public class Farm {
 				System.out.print("Thread sleep was interrupted");
 			}
 
-			
+			System.out.println("\nTurn: " + turn);
 			menuPrompt(gameField);
 			String rawUserInput = scannerObject.nextLine().toLowerCase(); //Converts the user input to lower case for added formatting
 			String finalUserInput = stringFinalizer(rawUserInput); //Formatted user input to be used below
@@ -64,17 +66,20 @@ public class Farm {
 						if (commandChar == 't') { // Till
 							progressTurn();
 							gameField.till(coordinates[0], coordinates[1]);
+							turn++;
 						}
 						
 						else if (commandChar == 'h') { // Harvest
 							harvest(coordinates[0], coordinates[1]);
 							progressTurn();
+							turn++;
 							
 						}
 						
 						else { // Plant
 							plant(coordinates[0],coordinates[1]);
 							progressTurn();
+							turn++;
 							
 						}
 						
@@ -89,6 +94,7 @@ public class Farm {
 			
 			else if (commandChar == 'w') {
 				progressTurn();
+				turn++;
 			}
 			
 			else if (commandChar == 'q') {
@@ -195,6 +201,7 @@ public class Farm {
 		
 		System.out.println("Sold '" + harvestedItem + "' for $" + returnValue + "\n");
 	}
+	
 	
 	
 	/**
