@@ -31,11 +31,12 @@ public class Farm {
 	
 	public void run() { //Function to initiate the game
 		
-		int turn = GameController.getTurns();
+		int turn = 1;
+		double winCost = 0;
 		
 		boolean activeGame = true;
 		
-		while (activeGame) {
+		while (activeGame || Funds > winCost) {
 			
 			try { // Slows the game pace for user's to process the result of their actions
 				Thread.sleep(1000); //1000 = 1 second wait

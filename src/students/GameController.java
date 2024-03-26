@@ -15,10 +15,10 @@ public class GameController {
 		
 		double initialGrowthRate = 1.5; // This may be changed with a difficulty level system
 		
-		double newWinCost = calculateWinCost(winCost, initialGrowthRate);
-		winCost = newWinCost;
-		
-		return newWinCost;
+		double calculatedCost = calculateWinCost(winCost, initialGrowthRate);
+		winCost = calculatedCost;
+
+		return calculatedCost;
 	}
 	
 	
@@ -31,12 +31,15 @@ public class GameController {
 	 */
 	private static double calculateWinCost(double initialAmount, double growthRate) {
 		
-		double calculatedCost = initialAmount * (1 + growthRate);
+		double calculatedCost = initialAmount * growthRate;
 		return calculatedCost;
 	}
 	
 	public static void main(String[] args) {
 		
+		for (int index = 0; index < 10; index++) {
+			System.out.println(getWinCost());
+		}
 		
 	}
 }
