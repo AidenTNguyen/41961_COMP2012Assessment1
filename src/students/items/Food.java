@@ -9,4 +9,7 @@ public abstract class Food extends Item{
 		super(maturationAge, expectedLifespan, monetaryValue);
 	}
 	
+	// Abstract method to get the seed costs
+	public abstract double getSeedCost();
+	
 }
