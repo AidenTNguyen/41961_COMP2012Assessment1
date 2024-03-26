@@ -202,7 +202,7 @@ public class Farm {
 	private void plant(int rowIndex, int columnIndex) {
 		
 		Scanner scannerObject = new Scanner(System.in);
-		
+		Item[][] fieldArray = gameField.getFieldDimensions();
 		
 		System.out.println("- 'a' to buy an apple for $" + Apples.getSeedCost());
 		System.out.println("- 'g' to buy an apple for $" + Grain.getSeedCost());
@@ -210,11 +210,19 @@ public class Farm {
 		String userChoice = scannerObject.nextLine();
 		String formattedInput = userChoice.replaceAll("\\s", ""); // If the user adds spaces by accident it gets removed
 		
-		try {
-			if (userChoice == "a") {
-				
-			}
+
+		if (userChoice.equals("a")) {
+			fieldArray[rowIndex][columnIndex] = new Apples();
 		}
+		
+		else if (userChoice.equals("g")){
+			fieldArray[rowIndex][columnIndex] = new Grain();
+		}
+		
+		else {
+			System.out.println("That item does not exist.");
+		}
+
 		
 		System.out.print("\n");
 		scannerObject.close();
