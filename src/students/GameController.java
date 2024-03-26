@@ -5,7 +5,7 @@ import java.text.DecimalFormat;
 // This class will control and regulate any boons or modifiers added to the game
 public class GameController {
 	
-	private static double winCost = 11;
+	private static double winCost = 15;
 	private static double growthRateMultiplier = 1.5; // This may be changed with a difficulty level system
 	
 	
