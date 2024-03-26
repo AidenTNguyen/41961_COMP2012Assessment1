@@ -247,8 +247,18 @@ public class Farm {
 	}
 
 	
+	
+	/**
+	 * Prints the summary of the current gameField
+	 */
 	private void summary() {
 		System.out.print(gameField.getSummary());
+		
+		try { // Slows the game pace for user's to process the result of their actions
+			Thread.sleep(2000); //1000 = 1 second wait
+		} catch (InterruptedException interrupted) {
+			System.out.print("Thread sleep was interrupted");
+		}
 	}
 	
 	
