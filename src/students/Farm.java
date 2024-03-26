@@ -171,7 +171,7 @@ public class Farm {
 		
 		double winCost = GameController.getWinCost();
 		FieldInterface field = gameField.getField();
-		System.out.print(field.toString());
+		System.out.print(field);
 		
 		System.out.println("\nBank balance: $" + Funds);
 		System.out.println("Your current goal is: $" + winCost + "\n");

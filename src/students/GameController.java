@@ -94,6 +94,7 @@ public class GameController implements ItemInterface, FieldInterface {
 
 	@Override
 	public void tick() {
+		field.tick();
 		
 	}
 }
