@@ -57,7 +57,7 @@ public class Item {
 	 * @return copy of Item's monetary value
 	 */
 	public double getValue() {
-		if (this.age > this.maturationAge) {
+		if (this.age >= this.maturationAge) {
 			double monetaryValueCopy = this.monetaryValue;
 			return monetaryValueCopy; //Returning a copy of the monetary value so it variable cannot be tampered with
 		}

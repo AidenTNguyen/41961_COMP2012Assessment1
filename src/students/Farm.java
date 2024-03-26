@@ -215,6 +215,7 @@ public class Farm {
 		
 		if	(!(fieldArray[rowIndex][columnIndex] instanceof Soil)) { // Is the selected position a soil object?
 			System.out.println("You cannot plant on anything other than Soil.");
+			return;
 		}
 		
 		switch (formattedInput) {
