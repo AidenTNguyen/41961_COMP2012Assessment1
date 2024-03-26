@@ -62,8 +62,8 @@ public class Farm {
 				else 
 					{
 						if (commandChar == 't') { // Till
-							gameField.till(coordinates[0], coordinates[1]);
 							progressTurn();
+							gameField.till(coordinates[0], coordinates[1]);
 						}
 						
 						else if (commandChar == 'h') { // Harvest
