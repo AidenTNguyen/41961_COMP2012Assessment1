@@ -31,6 +31,14 @@ public class Farm {
 		Scanner scannerObject = new Scanner(System.in);
 		
 		while (activeGame) {
+			
+			try { // Slows the game pace for user's to process the result of their actions
+				Thread.sleep(750);
+			} catch (InterruptedException interrupted) {
+				System.out.print("Thread sleep was interrupted");
+			}
+
+			
 			menuPrompt(gameField);
 			String rawUserInput = scannerObject.nextLine().toLowerCase(); //Converts the user input to lower case for added formatting
 			String finalUserInput = stringFinalizer(rawUserInput); //Formatted user input to be used below
