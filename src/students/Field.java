@@ -92,6 +92,15 @@ public class Field {
 	
 	
 	/**
+	 * Method for use in the Farm class to retrieve the fieldDimensions value of the Field class
+	 * @return fieldDimensions
+	 */
+	public Item[][] getFieldDimensions(){
+		return fieldDimensions;
+	}
+	
+	
+	/**
 	 * Function to create a new Soil object at the designated location regardless of whats there
 	 * @param rowIndex
 	 * @param columnIndex
