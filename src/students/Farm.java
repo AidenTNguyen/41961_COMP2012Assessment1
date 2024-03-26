@@ -111,12 +111,18 @@ public class Farm {
 			
 			// Once the win condition is met
 			System.out.println("Would you like to proceed to the next round?\n(y/n)");
-			String playAgain = scannerObject.nextLine();
-			if (playAgain.equals("y")) {
-				newGame();
-			}
-			else {
-				activeGame = false;
+			String playAgain = scannerObject.nextLine().toLowerCase();
+			
+			boolean validInput = false;
+			while (!validInput) {
+				if (playAgain.equals("y")) {
+					newGame();
+					validInput = true;
+				}
+				else {
+					activeGame = false;
+					validInput = true;
+				}
 			}
 			
 		}
