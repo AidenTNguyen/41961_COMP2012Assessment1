@@ -1,5 +1,5 @@
 package student.interfaces;
 
-public class FieldInterface {
+public interface FieldInterface {
 
 }
