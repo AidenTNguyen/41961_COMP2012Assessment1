@@ -155,16 +155,16 @@ public class Farm {
 				coordinates[index] = Integer.parseInt(parts[index + 1]) - 1; //converting the strings at index 1 and 2 into integers from parts into coordinates // Also subtracts 1 the integer value to reflect java index values
 			} 
 			
+			catch (NumberFormatException invalidInteger) {
+				System.out.println("##Invalid coordinates entered##\n");
+				return null; // Error to be handled by the caller
+			}
+			
 			catch (ArrayIndexOutOfBoundsException noIntegers) {
 				System.out.println("##Not enough coordinates entered##\n");
 				return null;
 						
 			}
-			catch (NumberFormatException invalidInteger) {
-				System.out.println("##Invalid coordinates entered##\n");
-				return null; // Error to be handled by the caller
-			}
-
 		}
 		return coordinates;
 	}
