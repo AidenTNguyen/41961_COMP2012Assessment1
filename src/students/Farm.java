@@ -33,7 +33,7 @@ public class Farm {
 		while (activeGame) {
 			
 			try { // Slows the game pace for user's to process the result of their actions
-				Thread.sleep(750);
+				Thread.sleep(1000); //1000 = 1 second wait
 			} catch (InterruptedException interrupted) {
 				System.out.print("Thread sleep was interrupted");
 			}
@@ -147,7 +147,7 @@ public class Farm {
 			} 
 			
 			catch (ArrayIndexOutOfBoundsException noIntegers) {
-				System.out.println("##No coordinates entered##\n");
+				System.out.println("##Not enough coordinates entered##\n");
 				return null;
 						
 			}
