@@ -280,7 +280,7 @@ public class Farm {
 	
 	public static void main(String[] args) {
 		
-		Farm simFarm = new Farm(10, 10, 10.0);
+		Farm simFarm = new Farm(10, 10);
 		simFarm.run();
 	}
 }
