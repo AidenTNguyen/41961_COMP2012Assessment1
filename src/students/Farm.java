@@ -214,24 +214,36 @@ public class Farm {
 			System.out.println("You cannot plant on anything other than Soil.");
 		}
 		
-		else {
 			
-			if (formattedInput.equals("a")) {
-				fieldArray[rowIndex][columnIndex] = new Apples();
-				Funds -= Apples.getSeedCost();
-			}
-			
-			else if (formattedInput.equals("g")){
-				fieldArray[rowIndex][columnIndex] = new Grain();
-				Funds -= Grain.getSeedCost();
-			}
-			
-			else {
-				System.out.println("That item does not exist.");
-			}
+//		}
+//		
+//		else {
+//			
+//			// Apples
+//			if (formattedInput.equals("a")) {
+//				if (Funds >= Apples.getSeedCost()){
+//					fieldArray[rowIndex][columnIndex] = new Apples();
+//					Funds -= Apples.getSeedCost();
+//				}
+//				else {
+//					System.out.println("You have insufficient funds for this purchase.");
+//				}	
+//			}
+//			// Grain
+//			if (formattedInput.equals("g")) {
+//				if (Funds >= Grain.getSeedCost()) {
+//					fieldArray[rowIndex][columnIndex] = new Grain();
+//					Funds -= Grain.getSeedCost();
+//
+//				}
+//				else {
+//					System.out.println("You have insufficient funds for this purchase.");
+//				}
+//			}
+//			System.out.println("That item does not exist.");
+//		}
+//		System.out.print("\n");
 		}
-		System.out.print("\n");
-	}
 	
 	
 	/**
