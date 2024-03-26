@@ -194,10 +194,11 @@ public class Farm {
 	
 	
 	/**
-	 * Function to replace current object in x & y with an item
+	 * This replaces a Soil object with a player selected Item to be planted.
+	 * If an invalid choice is made then the game will wait a turn
+	 * If they try to plant an item on a coordinate that is not Soil the game will wait a turn
 	 * @param rowIndex
 	 * @param columnIndex
-	 * @return String confirming planting outcome
 	 */
 	private void plant(int rowIndex, int columnIndex) {
 		
@@ -211,11 +212,11 @@ public class Farm {
 		String formattedInput = userChoice.replaceAll("\\s", ""); // If the user adds spaces by accident it gets removed
 		
 
-		if (userChoice.equals("a")) {
+		if (formattedInput.equals("a")) {
 			fieldArray[rowIndex][columnIndex] = new Apples();
 		}
 		
-		else if (userChoice.equals("g")){
+		else if (formattedInput.equals("g")){
 			fieldArray[rowIndex][columnIndex] = new Grain();
 		}
 		
