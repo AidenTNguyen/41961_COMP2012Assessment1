@@ -34,4 +34,16 @@ public class Grain extends Food{
 	}
 	
 	
+	
+	/**
+	 * This returns a copy of the cost of the seed
+	 * @return
+	 */
+	public double getSeedCost() {
+		
+		double seedCostValue = seedCost;
+		return seedCostValue;
+	}
+	
+	
 }
