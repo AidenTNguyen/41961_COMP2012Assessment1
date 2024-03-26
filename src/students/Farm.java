@@ -201,7 +201,23 @@ public class Farm {
 	 */
 	private void plant(int rowIndex, int columnIndex) {
 		
-		System.out.println("- 'a' to buy an apple for $" + Apples);
+		Scanner scannerObject = new Scanner(System.in);
+		
+		
+		System.out.println("- 'a' to buy an apple for $" + Apples.getSeedCost());
+		System.out.println("- 'g' to buy an apple for $" + Grain.getSeedCost());
+		
+		String userChoice = scannerObject.nextLine();
+		String formattedInput = userChoice.replaceAll("\\s", ""); // If the user adds spaces by accident it gets removed
+		
+		try {
+			if (userChoice == "a") {
+				
+			}
+		}
+		
+		System.out.print("\n");
+		scannerObject.close();
 	}
 	
 	
