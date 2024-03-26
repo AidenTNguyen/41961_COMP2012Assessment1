@@ -157,7 +157,8 @@ public class Farm {
 	 */
 	private void newGame() {
 		GameController.incrementWinCost();
-		gameField = new Field(fieldWidth, fieldHeight); // Resets the field
+		FieldInterface fieldDimensions = new Field(fieldWidth, fieldHeight);
+		this.gameField = new GameController(fieldDimensions); // Resets the field
 		// Will add more here for player buffs and such
 	}
 	

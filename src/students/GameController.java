@@ -59,22 +59,20 @@ public class GameController implements ItemInterface, FieldInterface {
 	}
 	
 	
+	
+	// Follwing methods are intercepted methods \\
 
 	
+	
+	@Override
 	public double getValue() {
 		double originalValue = item.getValue();
 		
 		double modifiedValue = originalValue * 5; //placeholder value
 		
-		return modifiedValue;
-		
-		
+		return modifiedValue;	
 	}
 
-	
-	
-	// Follwing methods are intercepted methods \\
-	
 	/**
 	 * Intercepts field's getFieldDimensions function
 	 */
