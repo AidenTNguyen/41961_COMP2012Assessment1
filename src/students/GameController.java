@@ -2,16 +2,17 @@ package students;
 
 import java.text.DecimalFormat;
 
+import student.interfaces.FieldInterface;
 import student.interfaces.ItemInterface;
 import students.items.Item;
 
 // This class will control and regulate any boons or modifiers added to the game by implementing interfaces and intercepting method calls
-public class GameController implements ItemInterface {
+public class GameController implements ItemInterface, FieldInterface {
 	
-	private ItemInterface Item;
+	private FieldInterface Field;
 
-	public GameController(ItemInterface Item) {
-		this.Item = Item;
+	public GameController(FieldInterface Field) {
+		this.Field = Field;
 	}
 	
 	

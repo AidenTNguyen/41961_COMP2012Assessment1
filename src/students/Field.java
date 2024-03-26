@@ -1,8 +1,9 @@
 package students;
+import student.interfaces.FieldInterface;
 import students.items.*; //Importing all classes from student.items for use in field
 
 
-public class Field {
+public class Field implements FieldInterface {
 	
 	//Class variables for height and width of field
 	private int height = 0;
