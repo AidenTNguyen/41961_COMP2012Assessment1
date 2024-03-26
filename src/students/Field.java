@@ -67,21 +67,21 @@ public class Field {
 	public String toString() {
 		String result = "   ";//placeholder string to hold the final String representation of the grid
 		
-		for (int columnIndex = 0; columnIndex < width; columnIndex++) {
-			result += (columnIndex + 1) + " "; //x-axis numbers			
+		for (int rowIndex = 0; rowIndex < height; rowIndex++) {
+			result += (rowIndex + 1) + " "; //x-axis numbers			
 		}
 		result += "\n";
 		
-		for (int rowIndex = 0; rowIndex < height; rowIndex++) {
-			result += (rowIndex + 1) + " "; //y-axis number
-			if (rowIndex < 9) { //logic to add a space after the x-axis coordinates are printed so the "10" doesnt throw the format off
+		for (int columnIndex = 0; columnIndex < width; columnIndex++) {
+			result += (columnIndex + 1) + " "; //y-axis number
+			if (columnIndex < 9) { //logic to add a space after the x-axis coordinates are printed so the "10" doesnt throw the format off
 				result += " ";
 			}
 			
-			for (int columnIndex = 0; columnIndex < width; columnIndex++) {
+			for (int rowIndex = 0; rowIndex < height; rowIndex++) {
 				result += fieldDimensions[rowIndex][columnIndex] + " ";
 				
-					if (columnIndex == (width - 1)) { //this if conditional is to move to the next line if all columns in the row have ben printed
+					if (rowIndex == (height - 1)) { //this if conditional is to move to the next line if all columns in the row have ben printed
 						result += "\n";
 					}
 				}
