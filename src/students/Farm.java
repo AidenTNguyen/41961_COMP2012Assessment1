@@ -36,7 +36,7 @@ public class Farm {
 		
 		boolean activeGame = true;
 		
-		while (activeGame || Funds > winCost) {
+		while (activeGame || winCondition(winCost)) {
 			
 			try { // Slows the game pace for user's to process the result of their actions
 				Thread.sleep(1000); //1000 = 1 second wait
@@ -110,9 +110,17 @@ public class Farm {
 	}
 	
 	
-	
-	private boolean winCondition() {
-		return Funds > 
+	/**
+	 * checks if the current player funds meet or exceed the win cost
+	 * @param winCost
+	 * @return boolean
+	 */
+	private boolean winCondition(double requiredWinCost) {
+		if (Funds >= requiredWinCost) {
+			System.out.println("\n **Congratulations you've beaten this round!");
+			return true;
+		}
+		return false;
 	}
 	
 	
