@@ -57,7 +57,18 @@ public class Farm {
 				
 				else 
 					{
-						//
+						if (commandChar == 't') { // Till
+							gameField.till(fieldHeight, fieldWidth);
+						}
+						
+						else if (commandChar == 'h') { // Harvest
+							
+						}
+						
+						else { // Plant
+							
+						}
+						
 					}
 				
 			}
