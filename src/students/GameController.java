@@ -105,7 +105,7 @@ public class GameController implements ItemInterface, FieldInterface {
 	 * Intercepts field's getSummary funcction
 	 */
 	@Override
-	public void getSummary() {
-		field.getSummary();
+	public String getSummary() {
+		return field.getSummary();
 	}
 }
