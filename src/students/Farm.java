@@ -71,6 +71,7 @@ public class Farm {
 						}
 						
 						else { // Plant
+							plant(coordinates[0],coordinates[1]);
 							
 						}
 						
@@ -198,10 +199,10 @@ public class Farm {
 	 * @param columnIndex
 	 * @return String confirming planting outcome
 	 */
-//	private String plant(int rowIndex, int columnIndex) {
-//		
-//		return "Item has been successfully planted in x,y";
-//	}
+	private void plant(int rowIndex, int columnIndex) {
+		
+		System.out.println("- 'a' to buy an apple for $" + Apples);
+	}
 	
 	
 	/**
