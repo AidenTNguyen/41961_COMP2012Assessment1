@@ -58,10 +58,11 @@ public class Farm {
 				else 
 					{
 						if (commandChar == 't') { // Till
-							gameField.till(fieldHeight, fieldWidth);
+							gameField.till(coordinates[0], coordinates[1]);
 						}
 						
 						else if (commandChar == 'h') { // Harvest
+							gameField(coordinates[0], coordinates[1]);
 							
 						}
 						
