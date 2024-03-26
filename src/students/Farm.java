@@ -246,7 +246,7 @@ public class Farm {
 	/**
 	 * Function to skip a turn
 	 */
-	private void skipTurn() {
+	private void progressTurn() {
 		gameField.tick();
 	}
 	
