@@ -32,7 +32,7 @@ public class Farm {
 	public void run() { //Function to initiate the game
 		
 		int turn = 1;
-		double winCost = 0;
+		double winCost = GameController.getWinCost();
 		
 		boolean activeGame = true;
 		
@@ -109,6 +109,11 @@ public class Farm {
 		scannerObject.close();
 	}
 	
+	
+	
+	private boolean winCondition() {
+		return Funds > 
+	}
 	
 	
 	
