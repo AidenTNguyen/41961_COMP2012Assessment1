@@ -239,36 +239,8 @@ public class Farm {
 				System.out.println("That item does not exist.");
 				break;
 		}
-			
-//		}
-//		
-//		else {
-//			
-//			// Apples
-//			if (formattedInput.equals("a")) {
-//				if (Funds >= Apples.getSeedCost()){
-//					fieldArray[rowIndex][columnIndex] = new Apples();
-//					Funds -= Apples.getSeedCost();
-//				}
-//				else {
-//					System.out.println("You have insufficient funds for this purchase.");
-//				}	
-//			}
-//			// Grain
-//			if (formattedInput.equals("g")) {
-//				if (Funds >= Grain.getSeedCost()) {
-//					fieldArray[rowIndex][columnIndex] = new Grain();
-//					Funds -= Grain.getSeedCost();
-//
-//				}
-//				else {
-//					System.out.println("You have insufficient funds for this purchase.");
-//				}
-//			}
-//			System.out.println("That item does not exist.");
-//		}
-//		System.out.print("\n");
-		}
+	}
+
 	
 	
 	/**
