@@ -84,7 +84,7 @@ public class Farm {
 			
 			//Rest of the user options that dont require coordinates
 			else if (commandChar == 's') {
-				//
+				summary();
 			}
 			
 			else if (commandChar == 'w') {
@@ -246,6 +246,10 @@ public class Farm {
 		}
 	}
 
+	
+	private void summary() {
+		System.out.print(gameField.getSummary());
+	}
 	
 	
 	/**

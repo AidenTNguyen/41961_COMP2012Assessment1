@@ -199,14 +199,14 @@ public class Field {
 		}
 		
 		String result = "";
-		result += "Apples:          " + appleInstances + "\n";
+		result += "\nApples:          " + appleInstances + "\n";
 		result += "Grains:          " + grainInstances + "\n";
 		result += "Soil:            " + soilInstances + "\n";
 		result += "Untilled:        " + untilledInstances + "\n";
 		result += "Weed:            " + weedInstances + "\n";
 		result += "For a total of: $" + totalValue;
 		result += "\nTotal apples created: " + totalAppleInstances; //returns total number of apple objects in the field
-		result += "\nTotal grain created: " + totalGrainInstances; //^
+		result += "\nTotal grain created: " + totalGrainInstances + "\n\n";
 		
 		return result;
 	}
