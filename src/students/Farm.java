@@ -31,81 +31,84 @@ public class Farm {
 	
 	public void run() { //Function to initiate the game
 		
-		int turn = 1;
-		double winCost = GameController.getWinCost();
-		
 		boolean activeGame = true;
 		
-		while (activeGame || winCondition(winCost)) {
+		while (activeGame) { // This while loop is for the whole game flow to repeat
 			
-			try { // Slows the game pace for user's to process the result of their actions
-				Thread.sleep(1000); //1000 = 1 second wait
-			} catch (InterruptedException interrupted) {
-				System.out.print("Thread sleep was interrupted");
-			}
-
-			System.out.println("\nTurn: " + turn);
-			menuPrompt(gameField);
-			String rawUserInput = scannerObject.nextLine().toLowerCase(); //Converts the user input to lower case for added formatting
-			String finalUserInput = stringFinalizer(rawUserInput); //Formatted user input to be used below
 			
-			char commandChar = finalUserInput.charAt(0);
+			int turn = 1;
+			double winCost = GameController.getWinCost();
 			
-			if (commandChar == 't' || commandChar == 'h' || commandChar == 'p') { //If conditional to check whether or not user input is for a command that requires coordinates
+			while (!winCondition(winCost)) { // This while loop is for each 'round'
 				
-				int[] coordinates = getCoordinates(finalUserInput);
+				try { // Slows the game pace for user's to process the result of their actions
+					Thread.sleep(1000); //1000 = 1 second wait
+				} catch (InterruptedException interrupted) {
+					System.out.print("Thread sleep was interrupted");
+				}
+	
+				System.out.println("\nTurn: " + turn);
+				menuPrompt(gameField);
+				String rawUserInput = scannerObject.nextLine().toLowerCase(); //Converts the user input to lower case for added formatting
+				String finalUserInput = stringFinalizer(rawUserInput); //Formatted user input to be used below
 				
-				if (coordinates == null || coordinates[0] > fieldHeight || coordinates[1] > fieldWidth) { // is the user's coordinate inputs outside the bounds of the field
+				char commandChar = finalUserInput.charAt(0);
+				
+				if (commandChar == 't' || commandChar == 'h' || commandChar == 'p') { //If conditional to check whether or not user input is for a command that requires coordinates
 					
-					System.out.println("Error: Invalid coordinates. Coordinates must be integers and within the bounds of the field.\n");
+					int[] coordinates = getCoordinates(finalUserInput);
 					
-				} 
-				
-				else 
-					{
-						if (commandChar == 't') { // Till
-							progressTurn();
-							gameField.till(coordinates[0], coordinates[1]);
-							turn++;
-						}
+					if (coordinates == null || coordinates[0] > fieldHeight || coordinates[1] > fieldWidth) { // is the user's coordinate inputs outside the bounds of the field
 						
-						else if (commandChar == 'h') { // Harvest
-							harvest(coordinates[0], coordinates[1]);
-							progressTurn();
-							turn++;
+						System.out.println("Error: Invalid coordinates. Coordinates must be integers and within the bounds of the field.\n");
+						
+					} 
+					
+					else 
+						{
+							if (commandChar == 't') { // Till
+								progressTurn();
+								gameField.till(coordinates[0], coordinates[1]);
+								turn++;
+							}
+							
+							else if (commandChar == 'h') { // Harvest
+								harvest(coordinates[0], coordinates[1]);
+								progressTurn();
+								turn++;
+								
+							}
+							
+							else { // Plant
+								plant(coordinates[0],coordinates[1]);
+								progressTurn();
+								turn++;
+								
+							}
 							
 						}
-						
-						else { // Plant
-							plant(coordinates[0],coordinates[1]);
-							progressTurn();
-							turn++;
-							
-						}
-						
-					}
+					
+				}
 				
-			}
-			
-			//Rest of the user options that dont require coordinates
-			else if (commandChar == 's') {
-				summary();
-			}
-			
-			else if (commandChar == 'w') {
-				progressTurn();
-				turn++;
-			}
-			
-			else if (commandChar == 'q') {
-				activeGame = false;
-			}
-			
-			else {
-				System.out.println("Invalid input. Please try again.");
+				//Rest of the user options that dont require coordinates
+				else if (commandChar == 's') {
+					summary();
+				}
+				
+				else if (commandChar == 'w') {
+					progressTurn();
+					turn++;
+				}
+				
+				else if (commandChar == 'q') {
+					activeGame = false;
+				}
+				
+				else {
+					System.out.println("Invalid input. Please try again.");
+				}
 			}
 		}
-		
 		scannerObject.close();
 	}
 	
