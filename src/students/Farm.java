@@ -141,7 +141,7 @@ public class Farm {
 		String[] parts = input.split("\\s+");
 		int[] coordinates = new int[2];
 		
-		for (int index = 0; index < 2; index++) {
+		for (int index = 1; index >= 0; index--) { // User will input x axis first while programming conventions of 2D arrays are typically y axis first hence the reversal
 			try {
 				coordinates[index] = Integer.parseInt(parts[index+1]); //converting the strings at index 1 and 2 into integers from parts into coordinates
 			} 
