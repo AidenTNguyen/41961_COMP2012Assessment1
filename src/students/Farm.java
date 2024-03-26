@@ -214,11 +214,11 @@ public class Farm {
 		
 		if	(!(selectedElement instanceof Soil)) { // Is the selected position a soil object?
 			if (formattedInput.equals("a")) {
-				fieldArray[rowIndex][columnIndex] = new Apples();
+				selectedElement = new Apples();
 			}
 			
 			else if (formattedInput.equals("g")){
-				fieldArray[rowIndex][columnIndex] = new Grain();
+				selectedElement = new Grain();
 			}
 			
 			else {
