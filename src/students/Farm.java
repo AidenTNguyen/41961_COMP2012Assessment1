@@ -214,6 +214,19 @@ public class Farm {
 			System.out.println("You cannot plant on anything other than Soil.");
 		}
 		
+		switch (formattedInput) {
+			// Apples
+			case "a":
+				if (Funds >= Apples.getSeedCost()) {
+					fieldArray[rowIndex][columnIndex] = new Apples();
+					Funds -= Apples.getSeedCost();
+				} else {
+					System.out.println("You have insufficient funds for this purchase.");
+				}
+				break;
+				
+
+		}
 			
 //		}
 //		
