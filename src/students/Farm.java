@@ -148,7 +148,7 @@ public class Farm {
 		
 		for (int index = 1; index >= 0; index--) { // User will input x axis first while programming conventions of 2D arrays are typically y axis first hence the reversal
 			try {
-				coordinates[index] = Integer.parseInt(parts[index+1]); //converting the strings at index 1 and 2 into integers from parts into coordinates
+				coordinates[index] = Integer.parseInt(parts[index+1]) - 1; //converting the strings at index 1 and 2 into integers from parts into coordinates // Also subtracts 1 the integer value to reflect java index values
 			} 
 			
 			catch (ArrayIndexOutOfBoundsException noIntegers) {
