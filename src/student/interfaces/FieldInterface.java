@@ -10,4 +10,6 @@ public interface FieldInterface {
 	
 	void tick();
 	
+	String getSummary();
+	
 }

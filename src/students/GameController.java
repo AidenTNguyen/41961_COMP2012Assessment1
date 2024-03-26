@@ -92,9 +92,20 @@ public class GameController implements ItemInterface, FieldInterface {
 		
 	}
 
+	/**
+	 * Intercepts field's tick function
+	 */
 	@Override
 	public void tick() {
 		field.tick();
 		
+	}
+
+	/**
+	 * Intercepts field's getSummary funcction
+	 */
+	@Override
+	public void getSummary() {
+		field.getSummary();
 	}
 }
