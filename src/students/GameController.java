@@ -6,7 +6,7 @@ import java.text.DecimalFormat;
 public class GameController {
 	
 	private static double winCost = 16.667;
-	
+	private static double growthRateMultiplier = 1.5; // This may be changed with a difficulty level system
 	
 	
 	/**
@@ -15,15 +15,16 @@ public class GameController {
 	 */
 	public static Double getWinCost() {
 		
-		double growthRateMultiplier = 1.5; // This may be changed with a difficulty level system
+//		double growthRateMultiplier = 1.5; // This may be changed with a difficulty level system
+//		
+//		Double calculatedCost = calculateWinCost(winCost, growthRateMultiplier);
+//		winCost = calculatedCost;
+//		
+//		String stringVersionOfCost = String.format("%.2f", calculatedCost); // Formatted version to 2 decimal places
+//		Double finalFormattedVersion = Double.parseDouble(stringVersionOfCost);
 		
-		Double calculatedCost = calculateWinCost(winCost, growthRateMultiplier);
-		winCost = calculatedCost;
-		
-		String stringVersionOfCost = String.format("%.2f", calculatedCost); // Formatted version to 2 decimal places
-		Double finalFormattedVersion = Double.parseDouble(stringVersionOfCost);
-		
-		return finalFormattedVersion; 
+		double copyCost = winCost;
+		return copyCost; 
 	}
 	
 	
@@ -34,10 +35,14 @@ public class GameController {
 	 * @param growthRate how quickly the
 	 * @return the new cost to win the round
 	 */
-	private static double calculateWinCost(double initialAmount, double growthRate) {
+	private static void calculateWinCost() {
 		
-		double calculatedCost = initialAmount * growthRate;
-		return calculatedCost;
+		double calculatedCost = winCost * growthRateMultiplier;
+		
+		String stringVersionOfCost = String.format("%.2f", calculatedCost); // Formatted version to 2 decimal places
+		Double finalFormattedVersion = Double.parseDouble(stringVersionOfCost);
+		
+		winCost = finalFormattedVersion;
 	}
 	
 	public static void main(String[] args) {

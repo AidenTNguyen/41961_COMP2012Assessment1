@@ -135,9 +135,12 @@ public class Farm {
 	 */
 	private void menuPrompt(Field field) {
 		
+		double winCost = GameController.getWinCost();
+		
 		System.out.print(field);
 		
-		System.out.println("\nBank balance: $" + Funds + "\n");
+		System.out.println("\nBank balance: $" + Funds);
+		System.out.println("Your current goal is: $" + winCost + "\n");
 		
 		System.out.println("Enter your next action:");
 		System.out.println("  t [x] [y]: till");
