@@ -156,12 +156,12 @@ public class Farm {
 			} 
 			
 			catch (NumberFormatException invalidInteger) {
-				System.out.println("##Invalid coordinates entered##\n");
+				System.out.println("\n##Invalid coordinates entered##");
 				return null; // Error to be handled by the caller
 			}
 			
 			catch (ArrayIndexOutOfBoundsException noIntegers) {
-				System.out.println("##Not enough coordinates entered##\n");
+				System.out.println("\n##Not enough coordinates entered##");
 				return null;
 						
 			}
