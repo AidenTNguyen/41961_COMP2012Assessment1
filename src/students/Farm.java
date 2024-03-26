@@ -256,13 +256,6 @@ public class Farm {
 	}
 	
 	
-	/**
-	 * Function to exit out of the game loop
-	 */
-//	private static void quit() {
-//		
-//	}
-	
 	
 	
 	public static void main(String[] args) {
