@@ -146,8 +146,13 @@ public class Farm {
 				coordinates[index] = Integer.parseInt(parts[index+1]); //converting the strings at index 1 and 2 into integers from parts into coordinates
 			} 
 			
+			catch (ArrayIndexOutOfBoundsException noIntegers) {
+				System.out.println("##No coordinates entered##\n");
+				return null;
+						
+			}
 			catch (NumberFormatException invalidInteger) {
-				System.out.println("Invalid coordinates entered");
+				System.out.println("##Invalid coordinates entered##\n");
 				return null; // Error to be handled by the caller
 			}
 
