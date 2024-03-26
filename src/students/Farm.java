@@ -108,6 +108,17 @@ public class Farm {
 					System.out.println("Invalid input. Please try again.");
 				}
 			}
+			
+			// Once the win condition is met
+			System.out.println("Would you like to proceed to the next round?\n(y/n)");
+			String playAgain = scannerObject.nextLine();
+			if (playAgain.equals("y")) {
+				newGame();
+			}
+			else {
+				activeGame = false;
+			}
+			
 		}
 		scannerObject.close();
 	}
@@ -120,12 +131,18 @@ public class Farm {
 	 */
 	private boolean winCondition(double requiredWinCost) {
 		if (Funds >= requiredWinCost) {
-			System.out.println("\n **Congratulations you've beaten this round!");
+			System.out.println("\n **Congratulations you've beaten this round**!\n");
 			return true;
 		}
 		return false;
 	}
 	
+	
+	
+	
+	private boolean newGame() {
+		
+	}
 	
 	
 	
