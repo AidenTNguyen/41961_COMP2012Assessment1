@@ -11,14 +11,16 @@ public class GameController {
 	 * This method will return the cost to win the game
 	 * @return winCost
 	 */
-	public static double getWinCost() {
+	public static String getWinCost() {
 		
 		double initialGrowthRate = 1.5; // This may be changed with a difficulty level system
 		
-		double calculatedCost = calculateWinCost(winCost, initialGrowthRate);
+		Double calculatedCost = calculateWinCost(winCost, initialGrowthRate);
 		winCost = calculatedCost;
-
-		return calculatedCost;
+		
+		String newWinCost = String.format("%.2f", calculatedCost); //Formatted version to 2 decimal places
+		
+		return newWinCost; // Rounding will cause slight inaccuracies which are not significant in an application like this
 	}
 	
 	
