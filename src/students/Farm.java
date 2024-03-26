@@ -8,7 +8,7 @@ public class Farm {
 	
 	private int fieldWidth = 0;
 	private int fieldHeight = 0;
-	private double Funds = 0.0;
+	private double Funds = 10.0;
 	private Field gameField;
 	
 	/**
@@ -18,11 +18,10 @@ public class Farm {
 	 * @param startingFunds dictates how much money the player starts with
 	 * @param gameField new Field object to be used in the game
 	 */
-	public Farm(int fieldWidth, int fieldHeight, double startingFunds) {
+	public Farm(int fieldWidth, int fieldHeight) {
 		
 		this.fieldWidth = fieldWidth;
 		this.fieldHeight = fieldHeight;
-		this.Funds = startingFunds;
 		
 		this.gameField = new Field(fieldWidth, fieldHeight); //Using Farm's height and width as the parameters for a field object
 	}
