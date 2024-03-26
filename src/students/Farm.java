@@ -203,7 +203,6 @@ public class Farm {
 	private void plant(int rowIndex, int columnIndex) {
 		
 		Item[][] fieldArray = gameField.getFieldDimensions();
-		Item selectedElement = fieldArray [rowIndex][columnIndex];
 		
 		System.out.println("- 'a' to buy an apple for $" + Apples.getSeedCost());
 		System.out.println("- 'g' to buy an apple for $" + Grain.getSeedCost());
@@ -211,24 +210,26 @@ public class Farm {
 		String userChoice = scannerObject.nextLine();
 		String formattedInput = userChoice.replaceAll("\\s", ""); // If the user adds spaces by accident it gets removed
 		
-		if	(!(selectedElement instanceof Soil)) { // Is the selected position a soil object?
+		if	(!(fieldArray[rowIndex][columnIndex] instanceof Soil)) { // Is the selected position a soil object?
+			System.out.println("You cannot plant on anything other than Soil.");
+		}
+		
+		else {
+			
 			if (formattedInput.equals("a")) {
-				selectedElement = new Apples();
+				fieldArray[rowIndex][columnIndex] = new Apples();
 				Funds -= Apples.getSeedCost();
 			}
 			
 			else if (formattedInput.equals("g")){
-				selectedElement = new Grain();
+				fieldArray[rowIndex][columnIndex] = new Grain();
 				Funds -= Grain.getSeedCost();
 			}
 			
 			else {
 				System.out.println("That item does not exist.");
 			}
-			
-		System.out.println("You cannot plant on anything other than Soil.");
 		}
-		
 		System.out.print("\n");
 	}
 	
