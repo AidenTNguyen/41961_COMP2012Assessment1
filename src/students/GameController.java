@@ -3,12 +3,21 @@ package students;
 import java.text.DecimalFormat;
 
 import student.interfaces.ItemInterface;
+import students.items.Item;
 
-// This class will control and regulate any boons or modifiers added to the game
+// This class will control and regulate any boons or modifiers added to the game by implementing interfaces and intercepting method calls
 public class GameController implements ItemInterface {
+	
+	private ItemInterface Item;
+
+	public GameController(ItemInterface Item) {
+		this.Item = Item;
+	}
+	
 	
 	private static double winCost = 15;
 	private static double growthRateMultiplier = 1.5; // This may be changed with a difficulty level system
+	
 	
 	
 	/**
@@ -39,12 +48,16 @@ public class GameController implements ItemInterface {
 		winCost = finalFormattedVersion;
 	}
 	
-	public static void main(String[] args) {
+	
+
+	
+	public double getValue() {
+		double originalValue = Item.getValue();
 		
-		for (int index = 0; index < 10; index++) {
-			incrementWinCost();
-			System.out.println(getWinCost());
-		}
+		double modifiedValue = originalValue * 5; //placeholder value
+		
+		return modifiedValue;
+		
 		
 	}
 }
