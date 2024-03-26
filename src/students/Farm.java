@@ -85,7 +85,7 @@ public class Farm {
 			}
 			
 			else if (commandChar == 'w') {
-				//
+				progressTurn();
 			}
 			
 			else if (commandChar == 'q') {
@@ -223,6 +223,7 @@ public class Farm {
 				} else {
 					System.out.println("You have insufficient funds for this purchase.");
 				}
+				progressTurn();
 				break;
 				
 			// Grain
@@ -233,10 +234,12 @@ public class Farm {
 				} else {
 					System.out.println("You have insufficient funds for this purchase.");
 				}
+				progressTurn();
 				break;
 			
 			default:
 				System.out.println("That item does not exist.");
+				progressTurn();
 				break;
 		}
 	}
