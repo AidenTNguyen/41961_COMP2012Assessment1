@@ -7,25 +7,27 @@ public class Farm {
 	private int fieldWidth = 0;
 	private int fieldHeight = 0;
 	private double startingFunds = 0.0;
+	private Field gameField;
 	
 	/**
 	 * Farm class constructed with a width & height parameter to be used in creating a new Field object
 	 * @param fieldWidth
 	 * @param fieldHeight
 	 * @param startingFunds dictates how much money the player starts with
+	 * @param gameField new Field object to be used in the game
 	 */
 	public Farm(int fieldWidth, int fieldHeight, double startingFunds) {
 		
 		this.fieldWidth = fieldWidth;
 		this.fieldHeight = fieldHeight;
 		this.startingFunds = startingFunds;
+		
+		this.gameField = new Field(fieldWidth, fieldHeight); //Using Farm's height and width as the parameters for a field object
 	}
 	
 	
 	
 	public void run() { //Function to initiate the game
-		
-		Field gameField = new Field(this.fieldWidth, this.fieldHeight); //Using Farm's height and width as the parameters for a field object
 		
 		boolean activeGame = true;
 		Scanner scannerObject = new Scanner(System.in);
@@ -62,7 +64,7 @@ public class Farm {
 						}
 						
 						else if (commandChar == 'h') { // Harvest
-							gameField(coordinates[0], coordinates[1]);
+							gameField.harvest(coordinates[0], coordinates[1]);
 							
 						}
 						
@@ -169,10 +171,11 @@ public class Farm {
 	 * @param columnIndex
 	 * @return string confirming harvest outcome
 	 */
-//	private static String harvest(int rowIndex, int columnIndex) {
-//		
-//		return "item has been harvested for $#";
-//	}
+	private String harvest(int rowIndex, int columnIndex) {
+		
+		String harvestedItem = System.out.print(gameField[rowIndex][columnIndex]);
+		return "Sold '" + harvestedItem + "' for";
+	}
 	
 	
 	/**
@@ -181,7 +184,7 @@ public class Farm {
 	 * @param columnIndex
 	 * @return String confirming planting outcome
 	 */
-//	private static String plant(int rowIndex, int columnIndex) {
+//	private String plant(int rowIndex, int columnIndex) {
 //		
 //		return "Item has been successfully planted in x,y";
 //	}
