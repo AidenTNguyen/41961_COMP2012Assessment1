@@ -33,10 +33,11 @@ public class Farm {
 		
 		boolean activeGame = true;
 		
+		int rounds = 1;
+		
 		while (activeGame) { // This while loop is for the whole game flow to repeat
 			
-			int round = 1;
-			int turn = 1;
+			int turns = 1;
 			double winCost = GameController.getWinCost();
 			
 			while (!winCondition(winCost)) { // This while loop is for each 'round'
@@ -47,7 +48,7 @@ public class Farm {
 					System.out.print("Thread sleep was interrupted");
 				}
 	
-				System.out.println("\nRound: " + round + "\nTurn: " + turn);
+				System.out.println("\nRound: " + rounds + "\nTurn: " + turns);
 				menuPrompt(gameField);
 				String rawUserInput = scannerObject.nextLine().toLowerCase(); //Converts the user input to lower case for added formatting
 				String finalUserInput = stringFinalizer(rawUserInput); //Formatted user input to be used below
@@ -69,20 +70,20 @@ public class Farm {
 							if (commandChar == 't') { // Till
 								progressTurn();
 								gameField.till(coordinates[0], coordinates[1]);
-								turn++;
+								turns++;
 							}
 							
 							else if (commandChar == 'h') { // Harvest
 								harvest(coordinates[0], coordinates[1]);
 								progressTurn();
-								turn++;
+								turns++;
 								
 							}
 							
 							else { // Plant
 								plant(coordinates[0],coordinates[1]);
 								progressTurn();
-								turn++;
+								turns++;
 								
 							}
 							
@@ -97,7 +98,7 @@ public class Farm {
 				
 				else if (commandChar == 'w') {
 					progressTurn();
-					turn++;
+					turns++;
 				}
 				
 				else if (commandChar == 'q') {
@@ -118,8 +119,8 @@ public class Farm {
 				if (playAgain.equals("y")) {
 					
 					newGame();
-					turn = 1;
-					round++;
+					turns = 1;
+					rounds++;
 					
 					validInput = true;
 				}
@@ -141,7 +142,7 @@ public class Farm {
 	 */
 	private boolean winCondition(double requiredWinCost) {
 		if (Funds >= requiredWinCost) {
-			System.out.println("\n **Congratulations you've beaten this round**!\n");
+			System.out.println("**Congratulations you've beaten this round**!\n");
 			return true;
 		}
 		return false;
@@ -149,9 +150,13 @@ public class Farm {
 	
 	
 	
-	
-	private boolean newGame() {
-		
+	/**
+	 * Increases the win cost and allows the player to select from a number of buffs
+	 */
+	private void newGame() {
+		GameController.incrementWinCost();
+		gameField = new Field(fieldWidth, fieldHeight); // Resets the field
+		// Will add more here for player buffs and such
 	}
 	
 	
