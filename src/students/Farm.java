@@ -202,7 +202,6 @@ public class Farm {
 	 */
 	private void plant(int rowIndex, int columnIndex) {
 		
-		Scanner scannerObject = new Scanner(System.in);
 		Item[][] fieldArray = gameField.getFieldDimensions();
 		Item selectedElement = fieldArray [rowIndex][columnIndex];
 		
@@ -215,10 +214,12 @@ public class Farm {
 		if	(!(selectedElement instanceof Soil)) { // Is the selected position a soil object?
 			if (formattedInput.equals("a")) {
 				selectedElement = new Apples();
+				Funds -= Apples.getSeedCost();
 			}
 			
 			else if (formattedInput.equals("g")){
 				selectedElement = new Grain();
+				Funds -= Grain.getSeedCost();
 			}
 			
 			else {
