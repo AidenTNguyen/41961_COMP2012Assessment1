@@ -12,12 +12,12 @@ public class GameController implements ItemInterface, FieldInterface {
 	private FieldInterface field;
 	private ItemInterface item;
 
-	public GameController(FieldInterface Field) {
-		this.field = Field;
+	public GameController(FieldInterface field) {
+		this.field = field;
 	}
 	
-	public GameController(ItemInterface Item) {
-		this.item = Item;
+	public GameController(ItemInterface item) {
+		this.item = item;
 	}
 	
 	
@@ -58,12 +58,17 @@ public class GameController implements ItemInterface, FieldInterface {
 
 	
 	public double getValue() {
-		double originalValue = Item.getValue();
+		double originalValue = item.getValue();
 		
 		double modifiedValue = originalValue * 5; //placeholder value
 		
 		return modifiedValue;
 		
 		
+	}
+
+	@Override
+	public Item[][] getFieldDimensions() {
+		return field.getFieldDimensions();
 	}
 }

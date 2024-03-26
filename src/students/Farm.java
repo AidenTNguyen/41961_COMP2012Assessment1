@@ -1,6 +1,7 @@
 package students;
 
 import java.util.Scanner; //For user input
+import student.interfaces.FieldInterface;
 
 import students.items.*;
 
@@ -9,7 +10,7 @@ public class Farm {
 	private int fieldWidth = 0;
 	private int fieldHeight = 0;
 	private double Funds = 10.0;
-	private Field gameField;
+	private FieldInterface gameField;
 	
 	/**
 	 * Farm class constructed with a width & height parameter to be used in creating a new Field object
