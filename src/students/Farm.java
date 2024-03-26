@@ -31,7 +31,7 @@ public class Farm {
 	
 	public void run() { //Function to initiate the game
 		
-		int turn = 1;
+		int turn = GameController.getTurns();
 		
 		boolean activeGame = true;
 		
