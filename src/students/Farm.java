@@ -49,7 +49,7 @@ public class Farm {
 				
 				int[] coordinates = getCoordinates(finalUserInput);
 				
-				if (coordinates != null && (coordinates[0] > fieldHeight || coordinates[1] > fieldWidth)) { // is the user's coordinate inputs outside the bounds of the field
+				if (coordinates == null || coordinates[0] > fieldHeight || coordinates[1] > fieldWidth) { // is the user's coordinate inputs outside the bounds of the field
 					
 					System.out.println("Error: Invalid coordinates. Coordinates must be integers and within the bounds of the field.\n");
 					
@@ -135,7 +135,8 @@ public class Farm {
 				coordinates[index] = Integer.parseInt(parts[index+1]); //converting the strings at index 1 and 2 into integers from parts into coordinates
 			} 
 			
-			catch (NumberFormatException e) {
+			catch (NumberFormatException invalidInteger) {
+				System.out.println("Invalid coordinates entered");
 				return null; // Error to be handled by the caller
 			}
 
