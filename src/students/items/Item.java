@@ -46,7 +46,7 @@ public class Item {
 	 * @return returns true or false depending on if age > expectedLifespan
 	 */
 	public boolean died() {
-		if (age == -1) { // Special case for ritems with no age or deathage
+		if (expectedLifespan == -1) { // Special case for ritems with no age or death age
 			return false;
 		}
 		return age > expectedLifespan;

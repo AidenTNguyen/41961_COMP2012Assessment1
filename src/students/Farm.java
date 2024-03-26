@@ -63,15 +63,18 @@ public class Farm {
 					{
 						if (commandChar == 't') { // Till
 							gameField.till(coordinates[0], coordinates[1]);
+							progressTurn();
 						}
 						
 						else if (commandChar == 'h') { // Harvest
 							harvest(coordinates[0], coordinates[1]);
+							progressTurn();
 							
 						}
 						
 						else { // Plant
 							plant(coordinates[0],coordinates[1]);
+							progressTurn();
 							
 						}
 						
@@ -223,7 +226,6 @@ public class Farm {
 				} else {
 					System.out.println("You have insufficient funds for this purchase.");
 				}
-				progressTurn();
 				break;
 				
 			// Grain
@@ -234,12 +236,10 @@ public class Farm {
 				} else {
 					System.out.println("You have insufficient funds for this purchase.");
 				}
-				progressTurn();
 				break;
 			
 			default:
 				System.out.println("That item does not exist.");
-				progressTurn();
 				break;
 		}
 	}
