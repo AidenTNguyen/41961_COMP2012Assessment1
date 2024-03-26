@@ -35,7 +35,7 @@ public class Farm {
 		
 		while (activeGame) { // This while loop is for the whole game flow to repeat
 			
-			
+			int round = 1;
 			int turn = 1;
 			double winCost = GameController.getWinCost();
 			
@@ -47,7 +47,7 @@ public class Farm {
 					System.out.print("Thread sleep was interrupted");
 				}
 	
-				System.out.println("\nTurn: " + turn);
+				System.out.println("\nRound: " + round + "\nTurn: " + turn);
 				menuPrompt(gameField);
 				String rawUserInput = scannerObject.nextLine().toLowerCase(); //Converts the user input to lower case for added formatting
 				String finalUserInput = stringFinalizer(rawUserInput); //Formatted user input to be used below
@@ -116,7 +116,11 @@ public class Farm {
 			boolean validInput = false;
 			while (!validInput) {
 				if (playAgain.equals("y")) {
+					
 					newGame();
+					turn = 1;
+					round++;
+					
 					validInput = true;
 				}
 				else {
