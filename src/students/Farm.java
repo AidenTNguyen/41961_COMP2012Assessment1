@@ -127,9 +127,13 @@ public class Farm {
 					
 					validInput = true;
 				}
-				else {
+				else if (playAgain.equals("n")) {
 					activeGame = false;
 					validInput = true;
+				}
+				else {
+					System.out.println("Invalid input, please enter 'y' or 'n'.");
+					playAgain = scannerObject.nextLine().toLowerCase();
 				}
 			}
 			
@@ -281,7 +285,7 @@ public class Farm {
 		System.out.println("- 'a' to buy an apple for $" + Apples.getSeedCost());
 		System.out.println("- 'g' to buy an apple for $" + Grain.getSeedCost());
 		
-		String userChoice = scannerObject.nextLine();
+		String userChoice = scannerObject.nextLine().toLowerCase();
 		String formattedInput = userChoice.replaceAll("\\s", ""); // If the user adds spaces by accident it gets removed
 		
 		switch (formattedInput) {
