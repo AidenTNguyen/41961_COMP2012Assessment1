@@ -283,7 +283,7 @@ public class Farm {
 		}
 		
 		System.out.println("- 'a' to buy an apple for $" + Apples.getSeedCost());
-		System.out.println("- 'g' to buy an apple for $" + Grain.getSeedCost());
+		System.out.println("- 'g' to buy an grain for $" + Grain.getSeedCost());
 		
 		String userChoice = scannerObject.nextLine().toLowerCase();
 		String formattedInput = userChoice.replaceAll("\\s", ""); // If the user adds spaces by accident it gets removed
