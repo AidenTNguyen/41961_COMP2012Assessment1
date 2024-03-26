@@ -1,7 +1,7 @@
 package students;
 
 import java.util.Scanner; //For user input
-import student.interfaces.FieldInterface;
+import student.interfaces.*;
 
 import students.items.*;
 
@@ -121,6 +121,7 @@ public class Farm {
 				if (playAgain.equals("y")) {
 					
 					newGame();
+					Funds = 10.0;
 					turns = 1;
 					rounds++;
 					
@@ -242,9 +243,12 @@ public class Farm {
 	private void harvest(int rowIndex, int columnIndex) {
 		
 		Item[][] fieldArray = gameField.getFieldDimensions();
-		String harvestedItem = fieldArray[rowIndex][columnIndex].toString();
+		ItemInterface harvestedItem;
+	
+		ItemInterface selectedItem = fieldArray[rowIndex][columnIndex]; // Casting the item at the position to an ItemInterface object
+		harvestedItem = new GameController(selectedItem); // Using the other constructor in GameController to store an ItemInterface object
 		
-		double returnValue = fieldArray[rowIndex][columnIndex].getValue();
+		double returnValue = harvestedItem.getValue();
 		Funds += returnValue;
 		
 		if (Double.compare(returnValue, 0) == 0) { // is the return Value equal to 0?
@@ -253,7 +257,7 @@ public class Farm {
 		
 		fieldArray[rowIndex][columnIndex] = new UntilledSoil();
 		
-		System.out.println("Sold '" + harvestedItem + "' for $" + returnValue + "\n");
+		System.out.println("Sold '" + selectedItem.toString() + "' for $" + returnValue + "\n");
 	}
 	
 	
