@@ -63,15 +63,15 @@ public class Farm {
 			}
 			
 			//Rest of the user options that dont require coordinates
-			else if (finalUserInput.charAt(0) == 's') {
+			else if (commandChar == 's') {
 				//
 			}
 			
-			else if (finalUserInput.charAt(0) == 'w') {
+			else if (commandChar == 'w') {
 				//
 			}
 			
-			else if (finalUserInput.charAt(0) == 'q') {
+			else if (commandChar == 'q') {
 				activeGame = false;
 			}
 			
