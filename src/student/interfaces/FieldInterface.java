@@ -6,5 +6,7 @@ public interface FieldInterface {
 
 	Item[][] getFieldDimensions();
 	
+	void till(int rowIndex, int columnIndex);
+	
 
 }

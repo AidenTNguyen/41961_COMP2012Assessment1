@@ -1,7 +1,5 @@
 package students;
 
-import java.text.DecimalFormat;
-
 import student.interfaces.FieldInterface;
 import student.interfaces.ItemInterface;
 import students.items.Item;
@@ -67,8 +65,24 @@ public class GameController implements ItemInterface, FieldInterface {
 		
 	}
 
+	
+	
+	// Follwing methods are intercepted methods \\
+	
+	/**
+	 * Intercepts field's getFieldDimensions function
+	 */
 	@Override
 	public Item[][] getFieldDimensions() {
 		return field.getFieldDimensions();
+	}
+
+	/**
+	 * Intercepts field's till function
+	 */
+	@Override
+	public void till(int rowIndex, int columnIndex) {
+		field.till(rowIndex, columnIndex);
+		
 	}
 }
