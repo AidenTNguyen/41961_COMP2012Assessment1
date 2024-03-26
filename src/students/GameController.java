@@ -1,5 +1,7 @@
 package students;
 
+import java.text.DecimalFormat;
+
 // This class will control and regulate any boons or modifiers added to the game
 public class GameController {
 	
@@ -9,18 +11,19 @@ public class GameController {
 	
 	/**
 	 * This method will return the cost to win the game
-	 * @return winCost
+	 * @return formatted win cost
 	 */
-	public static String getWinCost() {
+	public static Double getWinCost() {
 		
 		double growthRateMultiplier = 1.5; // This may be changed with a difficulty level system
 		
 		Double calculatedCost = calculateWinCost(winCost, growthRateMultiplier);
 		winCost = calculatedCost;
 		
-		String newWinCost = String.format("%.2f", calculatedCost); //Formatted version to 2 decimal places
+		String stringVersionOfCost = String.format("%.2f", calculatedCost); // Formatted version to 2 decimal places
+		Double finalFormattedVersion = Double.parseDouble(stringVersionOfCost);
 		
-		return newWinCost; // Rounding will cause slight inaccuracies which are not significant in an application like this
+		return finalFormattedVersion; 
 	}
 	
 	
