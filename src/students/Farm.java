@@ -28,11 +28,11 @@ public class Farm {
 	}
 	
 	
+	Scanner scannerObject = new Scanner(System.in);
 	
 	public void run() { //Function to initiate the game
 		
 		boolean activeGame = true;
-		Scanner scannerObject = new Scanner(System.in);
 		
 		while (activeGame) {
 			
@@ -224,11 +224,11 @@ public class Farm {
 			else {
 				System.out.println("That item does not exist.");
 			}
+			
 		System.out.println("You cannot plant on anything other than Soil.");
 		}
 		
 		System.out.print("\n");
-		scannerObject.close();
 	}
 	
 	
