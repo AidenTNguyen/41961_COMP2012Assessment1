@@ -111,7 +111,7 @@ public class Farm {
 		
 		System.out.print(field);
 		
-		System.out.println("\nBank balance: $" + startingFunds + "\n");
+		System.out.println("\nBank balance: $" + Funds + "\n");
 		
 		System.out.println("Enter your next action:");
 		System.out.println("  t [x] [y]: till");
@@ -168,7 +168,9 @@ public class Farm {
 	
 	
 	/**
-	 * Function to return value of item if past maturity and to replace with UntilledSoil object
+	 * Harvests the item at a specified location in the field thereby adding the value to the player's funds
+	 * Harvested item is then turned into an UntilledSoil object
+	 * If the item is not mature it will still be harvested but will be worth $0.0 and return a message
 	 * @param rowIndex
 	 * @param columnIndex
 	 * @return string confirming harvest outcome
@@ -179,8 +181,13 @@ public class Farm {
 		String harvestedItem = fieldArray[rowIndex][columnIndex].toString();
 		
 		double returnValue = fieldArray[rowIndex][columnIndex].getValue();
+		Funds += returnValue;
 		
+		if (Double.compare(returnValue, 0) == 0) { // is the return Value equal to 0?
+			System.out.println("The item was not mature.");
+		}
 		
+		fieldArray[rowIndex][columnIndex] = new UntilledSoil();
 		return "Sold '" + harvestedItem + "' for $" + returnValue;
 	}
 	
