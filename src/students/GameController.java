@@ -36,6 +36,12 @@ public class GameController implements ItemInterface, FieldInterface {
 	
 	
 	
+	public FieldInterface getField() {
+		return this.field;
+	}
+	
+	
+	
 	/**
 	 * calculates the new win cost based on the initial amount and growth rate
 	 * @param initialAmount is the initial win cost
@@ -83,6 +89,11 @@ public class GameController implements ItemInterface, FieldInterface {
 	@Override
 	public void till(int rowIndex, int columnIndex) {
 		field.till(rowIndex, columnIndex);
+		
+	}
+
+	@Override
+	public void tick() {
 		
 	}
 }

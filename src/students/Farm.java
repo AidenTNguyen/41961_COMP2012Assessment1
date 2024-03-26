@@ -51,7 +51,7 @@ public class Farm {
 				}
 	
 				System.out.println("\nRound: " + rounds + "\nTurn: " + turns);
-				menuPrompt(gameField);
+				menuPrompt();
 				String rawUserInput = scannerObject.nextLine().toLowerCase(); //Converts the user input to lower case for added formatting
 				String finalUserInput = stringFinalizer(rawUserInput); //Formatted user input to be used below
 				
@@ -167,11 +167,11 @@ public class Farm {
 	 * Function to print the field, current funds and menu options
 	 * @param field designated for print
 	 */
-	private void menuPrompt(FieldInterface field) {
+	private void menuPrompt() {
 		
 		double winCost = GameController.getWinCost();
-		
-		System.out.print(field);
+		FieldInterface field = gameField.getField();
+		System.out.print(field.toString());
 		
 		System.out.println("\nBank balance: $" + Funds);
 		System.out.println("Your current goal is: $" + winCost + "\n");

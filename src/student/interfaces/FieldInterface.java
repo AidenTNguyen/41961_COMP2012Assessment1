@@ -8,5 +8,6 @@ public interface FieldInterface {
 	
 	void till(int rowIndex, int columnIndex);
 	
-
+	void tick();
+	
 }
