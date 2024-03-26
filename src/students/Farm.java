@@ -179,7 +179,7 @@ public class Farm {
 	 * @param columnIndex
 	 * @return string confirming harvest outcome
 	 */
-	private String harvest(int rowIndex, int columnIndex) {
+	private void harvest(int rowIndex, int columnIndex) {
 		
 		Item[][] fieldArray = gameField.getFieldDimensions();
 		String harvestedItem = fieldArray[rowIndex][columnIndex].toString();
@@ -192,7 +192,8 @@ public class Farm {
 		}
 		
 		fieldArray[rowIndex][columnIndex] = new UntilledSoil();
-		return "Sold '" + harvestedItem + "' for $" + returnValue;
+		
+		System.out.println("Sold '" + harvestedItem + "' for $" + returnValue + "\n");
 	}
 	
 	
