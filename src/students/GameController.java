@@ -9,10 +9,15 @@ import students.items.Item;
 // This class will control and regulate any boons or modifiers added to the game by implementing interfaces and intercepting method calls
 public class GameController implements ItemInterface, FieldInterface {
 	
-	private FieldInterface Field;
+	private FieldInterface field;
+	private ItemInterface item;
 
 	public GameController(FieldInterface Field) {
-		this.Field = Field;
+		this.field = Field;
+	}
+	
+	public GameController(ItemInterface Item) {
+		this.item = Item;
 	}
 	
 	
