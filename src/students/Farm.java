@@ -10,7 +10,7 @@ public class Farm {
 	private int fieldWidth = 0;
 	private int fieldHeight = 0;
 	private double Funds = 10.0;
-	private FieldInterface gameField;
+	private GameController gameField;
 	
 	/**
 	 * Farm class constructed with a width & height parameter to be used in creating a new Field object
@@ -24,7 +24,8 @@ public class Farm {
 		this.fieldWidth = fieldWidth;
 		this.fieldHeight = fieldHeight;
 		
-		this.gameField = new Field(fieldWidth, fieldHeight); //Using Farm's height and width as the parameters for a field object
+		FieldInterface fieldDimensions = new Field(fieldWidth, fieldHeight); //Using Farm's height and width as the parameters for a field object
+		this.gameField = new GameController(fieldDimensions);
 	}
 	
 	
@@ -166,7 +167,7 @@ public class Farm {
 	 * Function to print the field, current funds and menu options
 	 * @param field designated for print
 	 */
-	private void menuPrompt(Field field) {
+	private void menuPrompt(FieldInterface field) {
 		
 		double winCost = GameController.getWinCost();
 		
