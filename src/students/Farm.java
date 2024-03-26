@@ -2,11 +2,13 @@ package students;
 
 import java.util.Scanner; //For user input
 
+import students.items.*;
+
 public class Farm {
 	
 	private int fieldWidth = 0;
 	private int fieldHeight = 0;
-	private double startingFunds = 0.0;
+	private double Funds = 0.0;
 	private Field gameField;
 	
 	/**
@@ -20,7 +22,7 @@ public class Farm {
 		
 		this.fieldWidth = fieldWidth;
 		this.fieldHeight = fieldHeight;
-		this.startingFunds = startingFunds;
+		this.Funds = startingFunds;
 		
 		this.gameField = new Field(fieldWidth, fieldHeight); //Using Farm's height and width as the parameters for a field object
 	}
@@ -64,7 +66,7 @@ public class Farm {
 						}
 						
 						else if (commandChar == 'h') { // Harvest
-							gameField.harvest(coordinates[0], coordinates[1]);
+							harvest(coordinates[0], coordinates[1]);
 							
 						}
 						
@@ -173,8 +175,13 @@ public class Farm {
 	 */
 	private String harvest(int rowIndex, int columnIndex) {
 		
-		String harvestedItem = System.out.print(gameField[rowIndex][columnIndex]);
-		return "Sold '" + harvestedItem + "' for";
+		Item[][] fieldArray = gameField.getFieldDimensions();
+		String harvestedItem = fieldArray[rowIndex][columnIndex].toString();
+		
+		double returnValue = fieldArray[rowIndex][columnIndex].getValue();
+		
+		
+		return "Sold '" + harvestedItem + "' for $" + returnValue;
 	}
 	
 	
