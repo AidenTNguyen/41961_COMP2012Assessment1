@@ -225,7 +225,19 @@ public class Farm {
 				}
 				break;
 				
-
+			// Grain
+			case "g":
+				if (Funds >= Grain.getSeedCost()) {
+					fieldArray[rowIndex][columnIndex] = new Grain();
+					Funds -= Grain.getSeedCost();
+				} else {
+					System.out.println("You have insufficient funds for this purchase.");
+				}
+				break;
+			
+			default:
+				System.out.println("That item does not exist.");
+				break;
 		}
 			
 //		}
