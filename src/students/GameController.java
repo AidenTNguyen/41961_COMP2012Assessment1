@@ -3,7 +3,7 @@ package students;
 // This class will control and regulate any boons or modifiers added to the game
 public class GameController {
 	
-	private static double winCost = 25.0;
+	private static double winCost = 16.667;
 	
 	
 	
@@ -13,9 +13,9 @@ public class GameController {
 	 */
 	public static String getWinCost() {
 		
-		double initialGrowthRate = 1.5; // This may be changed with a difficulty level system
+		double growthRateMultiplier = 1.5; // This may be changed with a difficulty level system
 		
-		Double calculatedCost = calculateWinCost(winCost, initialGrowthRate);
+		Double calculatedCost = calculateWinCost(winCost, growthRateMultiplier);
 		winCost = calculatedCost;
 		
 		String newWinCost = String.format("%.2f", calculatedCost); //Formatted version to 2 decimal places
@@ -26,7 +26,7 @@ public class GameController {
 	
 	
 	/**
-	 * This method calculates the growth of the win condition
+	 * calculates the new win cost based on the initial amount and growth rate
 	 * @param initialAmount is the initial win cost
 	 * @param growthRate how quickly the
 	 * @return the new cost to win the round
