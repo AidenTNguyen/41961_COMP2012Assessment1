@@ -77,15 +77,19 @@ public class GameController implements ItemInterface, FieldInterface {
 	/**
 	 * Returns nothing but prints out a list of buffs from the player to choose from
 	 */
-	public static void getBuffsList() {
+	public static double[] getBuffsList() {
 		
 		AppleBuff appleBoon = new AppleBuff(20, 200); // The ranges may be modified by a future system
 		GrainBuff grainBoon = new GrainBuff(20, 200);
 		
-		System.out.println("Please select one of the following boons!");
-		System.out.println("1. Increase the value of Apples by %" + appleBoon.getModifierPercentage());
-		System.out.println("2. Increase the value of Grains by %" + grainBoon.getModifierPercentage());
+		double appleModifierPercentage = appleBoon.getModifierPercentage();
+		double grainModifierPercentage = grainBoon.getModifierPercentage();
 		
+		System.out.println("Please select one of the following boons!");
+		System.out.println("1. Increase the value of Apples by %" + appleModifierPercentage);
+		System.out.println("2. Increase the value of Grains by %" + grainModifierPercentage);
+		
+		double[] buffHolder = new double[2];
 	}
 	
 	/**
