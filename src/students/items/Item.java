@@ -48,7 +48,7 @@ public class Item implements ItemInterface{
 	 * @return returns true or false depending on if age > expectedLifespan
 	 */
 	public boolean died() {
-		if (expectedLifespan == -1) { // Special case for ritems with no age or death age
+		if (expectedLifespan == -1) { // Special case for items with no age or death age
 			return false;
 		}
 		return age > expectedLifespan;
