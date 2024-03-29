@@ -43,7 +43,7 @@ public class Farm {
 			int turns = 1;
 			double winCost = GameController.getWinCost();
 			
-			while (!winCondition(winCost) || turns <= maxTurns) { // While win condition is not true and turns are within the maximum turns
+			while (!winCondition(winCost) && turns <= maxTurns) { // While win condition is not true and turns are within the maximum turns
 				
 				try { // Slows the game pace for user's to process the result of their actions
 					Thread.sleep(1000); //1000 = 1 second wait
@@ -51,7 +51,7 @@ public class Farm {
 					System.out.print("Thread sleep was interrupted");
 				}
 	
-				System.out.println("\nRound: " + rounds + "\nTurn: " + turns);
+				System.out.println("\nRound: " + rounds + "\nTurn: " + turns + " / " + maxTurns);
 				menuPrompt();
 				String rawUserInput = scannerObject.nextLine().toLowerCase(); //Converts the user input to lower case for added formatting
 				
@@ -121,9 +121,9 @@ public class Farm {
 			}
 			
 
-			if (rounds > maxTurns) {
+			if (turns > maxTurns) {
 				// Game loss because of max turns reached
-				System.out.println("You have reached the turn limit, Game Over.\n would you like to play again? (y/n)");
+				System.out.println("You have reached the turn limit, Game Over.\nwould you like to play again? (y/n)");
 			}
 			else {
 				// Win condition is met
