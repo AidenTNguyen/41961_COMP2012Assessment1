@@ -2,7 +2,7 @@ package students;
 
 public abstract class ItemModifiers {
 	
-	double generatedBuff = 0.0; // Buff percentage in the range of minRange to maxRange
+	protected double generatedBuff = 0.0; // Buff percentage in the range of minRange to maxRange
 	
 	/**
 	 * Generates a random number between minRange (inclusive) and maxRange(exclusive)
