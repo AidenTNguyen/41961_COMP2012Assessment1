@@ -106,14 +106,14 @@ public class GameController implements ItemInterface, FieldInterface {
 	@Override
 	public double getValue() {
 		
-		if (item instanceof Apples) {
+		if (item instanceof Apples) { // This is an area of the program that would be best encapsulated from future complexity by separating into its own class. But, i feel like i've added enough so this is good for what is there.
 			return item.getValue() * appleModifier;
 		}
 		else if (item instanceof Grain) {
 			return item.getValue() * grainModifier;
 		}
 		
-		return 0.0;
+		return 0.0; // Item doesn't exist, somehow.
 
 	}
 
