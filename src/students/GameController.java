@@ -54,6 +54,13 @@ public class GameController implements ItemInterface, FieldInterface {
 		return this.field;
 	}
 	
+	/**
+	 * Resets the win cost to 15.
+	 */
+	public static void resetWinCost() {
+		winCost = 15;
+	}
+	
 	
 	
 	/**
@@ -86,8 +93,8 @@ public class GameController implements ItemInterface, FieldInterface {
 		double grainModifierPercentage = grainBoon.getModifierPercentage();
 		
 		System.out.println("Please select one of the following boons!");
-		System.out.println("1. Increase the value of Apples by %" + appleModifierPercentage);
-		System.out.println("2. Increase the value of Grains by %" + grainModifierPercentage);
+		System.out.println("1. Increase the value of Apples by x" + appleModifierPercentage);
+		System.out.println("2. Increase the value of Grains by x" + grainModifierPercentage);
 		
 		double[] buffHolder = new double[2]; // This would probably be turned into a for loop if the number of items and buffs were to increase, it won't.
 		buffHolder[0] = appleModifierPercentage;
