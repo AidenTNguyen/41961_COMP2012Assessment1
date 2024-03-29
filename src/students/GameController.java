@@ -35,6 +35,14 @@ public class GameController implements ItemInterface, FieldInterface {
 		return copyCost; 
 	}
 	
+	/**
+	 * @return Returns a copy of the max turns variable
+	 */
+	public static int getMaxTurns() {
+		int maxTurnsCopy = maxTurns;
+		return maxTurnsCopy;
+	}
+	
 	
 	/**
 	 * Method to return the toString representation of the field stored in the gameController
