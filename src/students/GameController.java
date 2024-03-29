@@ -84,7 +84,7 @@ public class GameController implements ItemInterface, FieldInterface {
 		
 		System.out.println("Please select on of the following boons!");
 		System.out.println("1. Increase the value of Apples by %" + appleBoon.getModifierPercentage());
-		
+		System.out.println("2. Increase the value of Grains by %" + grainBoon.getModifierPercentage());
 		
 	}
 	
