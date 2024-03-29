@@ -2,7 +2,7 @@ package students;
 
 import students.interfaces.FieldInterface;
 import students.interfaces.ItemInterface;
-import students.items.Item;
+import students.items.*;
 import students.buffs.*;
 
 // This class will control and regulate any boons or modifiers added to the game by implementing interfaces and intercepting method calls
@@ -106,11 +106,15 @@ public class GameController implements ItemInterface, FieldInterface {
 	@Override
 	public double getValue() {
 		
-		double originalValue = item.getValue();
+		if (item instanceof Apples) {
+			return item.getValue() * appleModifier;
+		}
+		else if (item instanceof Grain) {
+			return item.getValue() * grainModifier;
+		}
 		
-		double modifiedValue = originalValue * 5; //placeholder value
-		
-		return modifiedValue;	
+		return 0.0;
+
 	}
 
 	/**
