@@ -36,7 +36,10 @@ public class GameController implements ItemInterface, FieldInterface {
 	}
 	
 	
-	
+	/**
+	 * Method to return the toString representation of the field stored in the gameController
+	 * @return the field string representation
+	 */
 	public FieldInterface getField() {
 		return this.field;
 	}
