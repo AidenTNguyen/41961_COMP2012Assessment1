@@ -61,6 +61,22 @@ public class GameController implements ItemInterface, FieldInterface {
 		winCost = 15;
 	}
 	
+	/**
+	 * Allows for game prompt to dynamically display current item value
+	 * @return true item value
+	 */
+	public static double getAppleValue() {
+		return 3.0 * appleModifier;
+	}
+	
+	/**
+	 * Allows for game prompt to dynamically display current item value
+	 * @return true item value
+	 */
+	public static double getGrainValue() {
+		return 2.0 * grainModifier;
+	}
+	
 	
 	
 	/**
