@@ -53,13 +53,14 @@ public class Farm {
 				System.out.println("\nRound: " + rounds + "\nTurn: " + turns);
 				menuPrompt();
 				String rawUserInput = scannerObject.nextLine().toLowerCase(); //Converts the user input to lower case for added formatting
-				String finalUserInput = stringFinalizer(rawUserInput); //Formatted user input to be used below
 				
-				if (!Character.toString(finalUserInput.charAt(0)).matches("[a-zA-Z]")) {
+				while (!Character.toString(rawUserInput.charAt(0)).matches("[a-zA-Z]")) {
 					System.out.println("Invalid input. Please try again.");
 					rawUserInput = scannerObject.nextLine().toLowerCase();
-					finalUserInput = stringFinalizer(rawUserInput);
 				}
+				
+				String finalUserInput = stringFinalizer(rawUserInput); //Formatted user input to be used below
+	
 				
 				char commandChar = finalUserInput.charAt(0);
 				
