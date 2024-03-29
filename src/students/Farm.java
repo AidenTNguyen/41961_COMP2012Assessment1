@@ -198,15 +198,15 @@ public class Farm {
 	 */
 	private void buffOffers() {
 		
-		String userChoice = "";
 		GameController.getBuffsList();
 		
-		while (!userChoice.equals(1) || !userChoice.equals(2)) {
-			if (userChoice.equals(1)) {
+		int userChoice = scannerObject.nextInt();
+		while (userChoice != 1 && userChoice != 2) {
+			if (userChoice == 1) {
 				
 			} 
 			
-			else if (userChoice.equals(2)) {
+			else if (userChoice == 2) {
 				
 			}
 			
