@@ -257,7 +257,7 @@ public class Farm {
 		ItemInterface harvestedItem;
 	
 		ItemInterface selectedItem = fieldArray[rowIndex][columnIndex]; // Casting the item at the position to an ItemInterface object
-		harvestedItem = new GameController(selectedItem); // Using the other constructor in GameController to store an ItemInterface object
+		harvestedItem = new GameController(selectedItem); // Using the Item constructor in GameController to store an ItemInterface object
 		
 		double returnValue = harvestedItem.getValue();
 		Funds += returnValue;
