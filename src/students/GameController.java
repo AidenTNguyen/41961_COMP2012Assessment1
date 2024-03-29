@@ -88,6 +88,14 @@ public class GameController implements ItemInterface, FieldInterface {
 		
 	}
 	
+	/**
+	 * This function will actually increase the value of the item with its generated percentage
+	 * @param item of type ItemModifier superclass
+	 */
+	public static void applyItemBuff(ItemModifiers item) {
+		
+	}
+	
 	
 	// Following methods are intercepted methods \\
 
