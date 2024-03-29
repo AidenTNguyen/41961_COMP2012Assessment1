@@ -77,8 +77,6 @@ public class GameController implements ItemInterface, FieldInterface {
 		return 2.0 * grainModifier;
 	}
 	
-	
-	
 	/**
 	 * calculates the new win cost based on the initial amount and growth rate
 	 * @param initialAmount is the initial win cost

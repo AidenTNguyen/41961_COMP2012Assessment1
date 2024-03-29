@@ -337,8 +337,8 @@ public class Farm {
 			return;
 		}
 		
-		System.out.println("- 'a' to buy an apple for $" + Apples.getSeedCost());
-		System.out.println("- 'g' to buy an apple for $" + Grain.getSeedCost());
+		System.out.println("- 'a' to buy an apple for $" + Apples.getSeedCost() + " || Worth at maturity: $" + GameController.getAppleValue());
+		System.out.println("- 'g' to buy an apple for $" + Grain.getSeedCost() + " || Worth at maturity: $" + GameController.getGrainValue());
 		
 		String userChoice = scannerObject.nextLine().toLowerCase();
 		String formattedInput = userChoice.replaceAll("\\s", ""); // If the user adds spaces by accident it gets removed
