@@ -186,6 +186,7 @@ public class Farm {
 	private void newGame(boolean ifWon) {
 		if (ifWon) {
 			GameController.incrementWinCost();
+			buffOffers();
 		}
 		FieldInterface fieldDimensions = new Field(fieldWidth, fieldHeight);
 		this.gameField = new GameController(fieldDimensions); // Resets the field
@@ -197,6 +198,12 @@ public class Farm {
 	 */
 	private void buffOffers() {
 		
+		String userChoice = "";
+		GameController.getBuffsList();
+		
+		while (!userChoice.equals(1) || !userChoice.equals(2)) {
+			
+		}
 	}
 	
 	
