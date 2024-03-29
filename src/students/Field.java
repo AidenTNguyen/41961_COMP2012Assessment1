@@ -1,5 +1,5 @@
 package students;
-import student.interfaces.FieldInterface;
+import students.interfaces.FieldInterface;
 import students.items.*; //Importing all classes from student.items for use in field
 
 

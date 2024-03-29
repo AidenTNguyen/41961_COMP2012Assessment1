@@ -1,6 +1,6 @@
 package students.items;
 
-import student.interfaces.ItemInterface;
+import students.interfaces.ItemInterface;
 
 /**
  * Represents the base class of all foods.

@@ -1,7 +1,7 @@
 package students;
 
-import student.interfaces.FieldInterface;
-import student.interfaces.ItemInterface;
+import students.interfaces.FieldInterface;
+import students.interfaces.ItemInterface;
 import students.items.Item;
 
 // This class will control and regulate any boons or modifiers added to the game by implementing interfaces and intercepting method calls

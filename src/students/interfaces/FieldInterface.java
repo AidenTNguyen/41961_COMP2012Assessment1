@@ -1,4 +1,4 @@
-package student.interfaces;
+package students.interfaces;
 
 import students.items.Item;
 

@@ -1,4 +1,4 @@
-package student.interfaces;
+package students.interfaces;
 
 public interface ItemInterface {
 	double getValue();
