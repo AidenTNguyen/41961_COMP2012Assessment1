@@ -61,7 +61,7 @@ public class GameController implements ItemInterface, FieldInterface {
 	
 	
 	
-	// Follwing methods are intercepted methods \\
+	// Following methods are intercepted methods \\
 
 	
 	
