@@ -71,6 +71,8 @@ public class GameController implements ItemInterface, FieldInterface {
 		winCost = finalFormattedVersion;
 	}
 	
+	// Following methods are related to the buff system \\
+	
 	
 	
 	// Following methods are intercepted methods \\
