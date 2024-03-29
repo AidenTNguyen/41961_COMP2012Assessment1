@@ -89,7 +89,11 @@ public class GameController implements ItemInterface, FieldInterface {
 		System.out.println("1. Increase the value of Apples by %" + appleModifierPercentage);
 		System.out.println("2. Increase the value of Grains by %" + grainModifierPercentage);
 		
-		double[] buffHolder = new double[2];
+		double[] buffHolder = new double[2]; // This would probably be turned into a for loop if the number of items and buffs were to increase, it won't.
+		buffHolder[0] = appleModifierPercentage;
+		buffHolder[1] = grainModifierPercentage;
+		
+		return buffHolder;
 	}
 	
 	/**
