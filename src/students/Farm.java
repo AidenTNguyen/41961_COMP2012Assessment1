@@ -343,6 +343,7 @@ public class Farm {
 	 */
 	private void progressTurn() {
 		gameField.tick();
+		System.out.println("Turn progressed.");
 	}
 	
 	
