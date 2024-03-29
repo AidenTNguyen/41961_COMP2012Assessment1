@@ -23,8 +23,8 @@ public class GameController implements ItemInterface, FieldInterface {
 	private static double winCost = 15;
 	private static double growthRateMultiplier = 1.5; // This may be changed with a difficulty level system
 	private static int maxTurns = 20; // May be changed later by player buffs
-	private static double appleModifier = 1.0;
-	private static double grainModifier = 1.0;
+	private static double appleModifier = 0.0;
+	private static double grainModifier = 0.0;
 	
 	
 	/**
@@ -100,9 +100,7 @@ public class GameController implements ItemInterface, FieldInterface {
 	// Following methods are intercepted methods \\
 
 	
-	/**
-	 * Intercepts the Item's classes getValue function to modify the final value before being returned
-	 */
+	
 	@Override
 	public double getValue() {
 		
