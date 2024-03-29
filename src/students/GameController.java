@@ -22,7 +22,7 @@ public class GameController implements ItemInterface, FieldInterface {
 	
 	private static double winCost = 15;
 	private static double growthRateMultiplier = 1.5; // This may be changed with a difficulty level system
-	private static int maxTurns = 2; // May be changed later by player buffs
+	private static int maxTurns = 20; // May be changed later by player buffs
 	private static double appleModifier = 0.0;
 	private static double grainModifier = 0.0;
 	
