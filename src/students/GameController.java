@@ -94,6 +94,10 @@ public class GameController implements ItemInterface, FieldInterface {
 	 */
 	public static void applyItemBuff(ItemModifiers item) {
 		
+		if (item instanceof AppleBuff) {
+			appleModifier += //
+		}
+		
 	}
 	
 	
