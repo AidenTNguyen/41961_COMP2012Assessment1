@@ -200,14 +200,17 @@ public class Farm {
 		
 		GameController.getBuffsList();
 		
-		int userChoice = scannerObject.nextInt();
-		while (userChoice != 1 && userChoice != 2) {
+		boolean exitLoop = false;
+		while (!exitLoop) {
+			
+			int userChoice = scannerObject.nextInt();
+			
 			if (userChoice == 1) {
-				
+				exitLoop = true;
 			} 
 			
 			else if (userChoice == 2) {
-				
+				exitLoop = true;
 			}
 			
 			else {
