@@ -190,7 +190,6 @@ public class Farm {
 		}
 		FieldInterface fieldDimensions = new Field(fieldWidth, fieldHeight);
 		this.gameField = new GameController(fieldDimensions); // Resets the field
-		buffOffers();
 	}
 	
 	/**
