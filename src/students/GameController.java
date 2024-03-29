@@ -3,6 +3,7 @@ package students;
 import students.interfaces.FieldInterface;
 import students.interfaces.ItemInterface;
 import students.items.Item;
+import students.buffs.*;
 
 // This class will control and regulate any boons or modifiers added to the game by implementing interfaces and intercepting method calls
 public class GameController implements ItemInterface, FieldInterface {
@@ -73,6 +74,16 @@ public class GameController implements ItemInterface, FieldInterface {
 	
 	// Following methods are related to the buff system \\
 	
+	/**
+	 * Returns nothing but prints out a list of buffs from the player to choose from
+	 */
+	public static void getBuffsList() {
+		
+		AppleBuff appleBoon = new AppleBuff(20, 200); // The ranges may be modified by a future system
+		GrainBuff grainBoon = new GrainBuff(20, 200);
+		
+		
+	}
 	
 	
 	// Following methods are intercepted methods \\
@@ -81,6 +92,7 @@ public class GameController implements ItemInterface, FieldInterface {
 	
 	@Override
 	public double getValue() {
+		
 		double originalValue = item.getValue();
 		
 		double modifiedValue = originalValue * 5; //placeholder value
@@ -93,7 +105,9 @@ public class GameController implements ItemInterface, FieldInterface {
 	 */
 	@Override
 	public Item[][] getFieldDimensions() {
+		
 		return field.getFieldDimensions();
+		
 	}
 
 	/**
@@ -101,6 +115,7 @@ public class GameController implements ItemInterface, FieldInterface {
 	 */
 	@Override
 	public void till(int rowIndex, int columnIndex) {
+		
 		field.till(rowIndex, columnIndex);
 		
 	}
@@ -110,6 +125,7 @@ public class GameController implements ItemInterface, FieldInterface {
 	 */
 	@Override
 	public void tick() {
+		
 		field.tick();
 		
 	}
@@ -119,6 +135,7 @@ public class GameController implements ItemInterface, FieldInterface {
 	 */
 	@Override
 	public String getSummary() {
+		
 		return field.getSummary();
 	}
 }
