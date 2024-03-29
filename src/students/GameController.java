@@ -79,8 +79,8 @@ public class GameController implements ItemInterface, FieldInterface {
 	 */
 	public static double[] getBuffsList() {
 		
-		AppleBuff appleBoon = new AppleBuff(20, 200); // The ranges may be modified by a future system
-		GrainBuff grainBoon = new GrainBuff(20, 200);
+		AppleBuff appleBoon = new AppleBuff(1.25, 3); // The ranges may be modified by a future system
+		GrainBuff grainBoon = new GrainBuff(1.25, 3);
 		
 		double appleModifierPercentage = appleBoon.getModifierPercentage();
 		double grainModifierPercentage = grainBoon.getModifierPercentage();
