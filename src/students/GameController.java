@@ -100,12 +100,12 @@ public class GameController implements ItemInterface, FieldInterface {
 	 * This function will actually increase the value of the item with its generated percentage
 	 * @param item of type ItemModifier superclass
 	 */
-	public static void applyItemBuff(ItemModifiers item, double modifier) {
+	public static void applyItemBuff(int choice, double modifier) {
 		
-		if (item instanceof AppleBuff) {
+		if (choice == 1) {
 			appleModifier += modifier;
 		}
-		else if (item instanceof GrainBuff) {
+		else if (choice == 2) {
 			grainModifier += modifier;
 		}
 		

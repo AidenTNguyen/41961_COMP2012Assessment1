@@ -197,7 +197,7 @@ public class Farm {
 	 */
 	private void buffOffers() {
 		
-		GameController.getBuffsList();
+		double[] buffHolder = GameController.getBuffsList();
 		
 		boolean exitLoop = false;
 		while (!exitLoop) {
@@ -205,10 +205,12 @@ public class Farm {
 			int userChoice = scannerObject.nextInt();
 			
 			if (userChoice == 1) {
+				GameController.applyItemBuff(1, buffHolder[0]);
 				exitLoop = true;
 			} 
 			
 			else if (userChoice == 2) {
+				GameController.applyItemBuff(2, buffHolder[1]);
 				exitLoop = true;
 			}
 			
