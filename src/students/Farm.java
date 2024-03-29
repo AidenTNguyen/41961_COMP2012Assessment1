@@ -43,7 +43,7 @@ public class Farm {
 			int turns = 1;
 			double winCost = GameController.getWinCost();
 			
-			while (!winCondition(winCost)) { // This while loop is for each 'round'
+			while (!winCondition(winCost) || turns <= maxTurns) { // While win condition is not true and turns are within the maximum turns
 				
 				try { // Slows the game pace for user's to process the result of their actions
 					Thread.sleep(1000); //1000 = 1 second wait
