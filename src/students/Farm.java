@@ -34,6 +34,7 @@ public class Farm {
 	public void run() { //Function to initiate the game
 		
 		boolean activeGame = true;
+		int maxTurns;
 		
 		int rounds = 1;
 		
