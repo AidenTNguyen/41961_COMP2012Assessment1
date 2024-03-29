@@ -54,7 +54,7 @@ public class Farm {
 				menuPrompt();
 				String rawUserInput = scannerObject.nextLine().toLowerCase(); //Converts the user input to lower case for added formatting
 				
-				while (!Character.toString(rawUserInput.charAt(0)).matches("[a-zA-Z]")) {
+				while (rawUserInput.isEmpty() || !Character.toString(rawUserInput.charAt(0)).matches("[a-zA-Z]")) {
 					System.out.println("Invalid input. Please try again.");
 					rawUserInput = scannerObject.nextLine().toLowerCase();
 				}
