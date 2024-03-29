@@ -189,7 +189,14 @@ public class Farm {
 		}
 		FieldInterface fieldDimensions = new Field(fieldWidth, fieldHeight);
 		this.gameField = new GameController(fieldDimensions); // Resets the field
-		// Will add more here for player buffs and such
+		buffOffers();
+	}
+	
+	/**
+	 * This function will be called in newGame to list a number of buffs for the player to choose
+	 */
+	private void buffOffers() {
+		
 	}
 	
 	
