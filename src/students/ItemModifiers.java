@@ -1,6 +1,6 @@
 package students;
 
-public abstract class itemModifiers {
+public abstract class ItemModifiers {
 	
 	/**
 	 * Generates a random number between minRange (inclusive) and maxRange(exclusive)
