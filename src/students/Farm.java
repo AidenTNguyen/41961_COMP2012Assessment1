@@ -55,6 +55,12 @@ public class Farm {
 				String rawUserInput = scannerObject.nextLine().toLowerCase(); //Converts the user input to lower case for added formatting
 				String finalUserInput = stringFinalizer(rawUserInput); //Formatted user input to be used below
 				
+				if (!Character.toString(finalUserInput.charAt(0)).matches("[a-zA-Z]")) {
+					System.out.println("Invalid input. Please try again.");
+					rawUserInput = scannerObject.nextLine().toLowerCase();
+					finalUserInput = stringFinalizer(rawUserInput);
+				}
+				
 				char commandChar = finalUserInput.charAt(0);
 				
 				if (commandChar == 't' || commandChar == 'h' || commandChar == 'p') { //If conditional to check whether or not user input is for a command that requires coordinates
