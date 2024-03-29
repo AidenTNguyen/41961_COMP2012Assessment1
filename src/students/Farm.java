@@ -120,18 +120,32 @@ public class Farm {
 				}
 			}
 			
-			// Once the win condition is met
-			System.out.println("Would you like to proceed to the next round?\n(y/n)");
+
+			if (rounds > maxTurns) {
+				// Game loss because of max turns reached
+				System.out.println("You have reached the turn limit, Game Over.\n would you like to play again? (y/n)");
+			}
+			else {
+				// Win condition is met
+				System.out.println("Would you like to proceed to the next round?\n(y/n)");
+			}
 			String playAgain = scannerObject.nextLine().toLowerCase();
 			
 			boolean validInput = false;
 			while (!validInput) {
 				if (playAgain.equals("y")) {
 					
-					newGame();
-					Funds = 10.0;
-					turns = 1;
-					rounds++;
+					if (rounds <= maxTurns) { // Won Game
+						newGame();
+						Funds = 10.0;
+						turns = 1;
+						rounds++;
+					}
+					else { // Lost Game
+						newGame();
+						Funds = 10.0;
+						turns = 1;
+					}
 					
 					validInput = true;
 				}
