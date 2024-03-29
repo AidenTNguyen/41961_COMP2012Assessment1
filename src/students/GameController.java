@@ -82,6 +82,9 @@ public class GameController implements ItemInterface, FieldInterface {
 		AppleBuff appleBoon = new AppleBuff(20, 200); // The ranges may be modified by a future system
 		GrainBuff grainBoon = new GrainBuff(20, 200);
 		
+		System.out.println("Please select on of the following boons!");
+		System.out.println("1. Increase the value of Apples by %" + appleBoon.getModifierPercentage());
+		
 		
 	}
 	

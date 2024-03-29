@@ -19,7 +19,7 @@ public abstract class ItemModifiers {
 	/**
 	 * @return returns a copy of the generated buff percentage
 	 */
-	protected double getModifierPercentage() {
+	public double getModifierPercentage() {
 		return generatedBuff;
 	}
 
