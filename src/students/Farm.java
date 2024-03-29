@@ -136,13 +136,13 @@ public class Farm {
 				if (playAgain.equals("y")) {
 					
 					if (rounds <= maxTurns) { // Won Game
-						newGame();
+						newGame(true);
 						Funds = 10.0;
 						turns = 1;
 						rounds++;
 					}
 					else { // Lost Game
-						newGame();
+						newGame(false);
 						Funds = 10.0;
 						turns = 1;
 					}
@@ -180,10 +180,12 @@ public class Farm {
 	
 	
 	/**
-	 * Increases the win cost and allows the player to select from a number of buffs
+	 * Increases the win cost and allows the player to select from a number of buffs IF they won the round
 	 */
-	private void newGame() {
-		GameController.incrementWinCost();
+	private void newGame(boolean ifWon) {
+		if (ifWon) {
+			GameController.incrementWinCost();
+		}
 		FieldInterface fieldDimensions = new Field(fieldWidth, fieldHeight);
 		this.gameField = new GameController(fieldDimensions); // Resets the field
 		// Will add more here for player buffs and such
