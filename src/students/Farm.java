@@ -203,14 +203,14 @@ public class Farm {
 		boolean exitLoop = false;
 		while (!exitLoop) {
 			
-			int userChoice = scannerObject.nextInt();
+			String userChoice = scannerObject.nextLine();
 			
-			if (userChoice == 1) {
+			if (userChoice.equals("1")) {
 				GameController.applyItemBuff(1, buffHolder[0]);
 				exitLoop = true;
 			} 
 			
-			else if (userChoice == 2) {
+			else if (userChoice.equals("2")) {
 				GameController.applyItemBuff(2, buffHolder[1]);
 				exitLoop = true;
 			}
