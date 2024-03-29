@@ -202,6 +202,17 @@ public class Farm {
 		GameController.getBuffsList();
 		
 		while (!userChoice.equals(1) || !userChoice.equals(2)) {
+			if (userChoice.equals(1)) {
+				
+			} 
+			
+			else if (userChoice.equals(2)) {
+				
+			}
+			
+			else {
+				System.out.println("Invalid input, please select one of the valid options.");
+			}
 			
 		}
 	}
