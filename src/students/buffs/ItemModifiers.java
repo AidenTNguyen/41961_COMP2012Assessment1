@@ -1,4 +1,4 @@
-package students;
+package students.buffs;
 
 public abstract class ItemModifiers {
 	
