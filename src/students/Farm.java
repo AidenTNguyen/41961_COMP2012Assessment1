@@ -145,6 +145,7 @@ public class Farm {
 						newGame(false);
 						Funds = 10.0;
 						turns = 1;
+						rounds = 1;
 					}
 					
 					validInput = true;
